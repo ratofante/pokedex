@@ -19,13 +19,20 @@ if(isset($_POST['submit']))
 			echo "<h1>".$pokedex->nombre."</h1>";
 			echo "<br>";
 			echo $pokedex->img;
-			echo "<br>";	
-					
+			echo "<br>";
+
+			echo "<h2>Tipos: ".$pokedex->tipos."</h2>";
+
+			$moves = $pokedex->movimientos;
+			$moves = implode(" | ", $moves);
+			echo "<label for='ataques'>Ataques que puede aprender:</label><fieldset id='ataques'>".$moves."</fieldset>";
+			echo "<br>";
 
 			echo "<pre>";
-			var_dump($pokedex->movimientos);
+			var_dump($pokedex->info);
 			echo "</pre>";
-			
+					
+
 		}
 		else
 		{

@@ -8,6 +8,8 @@ class Pokedex
 	public $nombre;
 	public $img;
 	public $movimientos =[];
+	public $info;
+	public $tipos;
 
 	public function __construct($id)
 	{
@@ -17,6 +19,8 @@ class Pokedex
 		$this->getName();
 		$this->getImg();
 		$this->getMoves();
+		$this->getType();
+		$this->getInfo();
 	}
 	public function getName()
 	{	
@@ -28,6 +32,27 @@ class Pokedex
 		$img = get_object_vars($img['other']);
 		$img = get_object_vars($img['official-artwork']);
 		$this->img = "<img src='".$img['front_default']."' style='width:100px;height:100px'>"; 	
+	}
+	public function getType()
+	{
+		$tipos = $this->pokemon['types'];
+		foreach ($tipos as $key => $value) 
+		{
+			$tipo=get_object_vars($tipos[$key]);
+			$arrayTipos[] = get_object_vars($tipo['type']);
+		}
+		$tipos = $arrayTipos;
+		foreach($tipos as $key => $value)
+		{
+			$resultado[] = $tipos[$key]['name'];
+		}
+		$this->tipos = implode(" - ", $resultado);
+	}
+	public function getInfo()
+	{
+		$species = get_object_vars($this->pokemon['species']);
+		$data_json = file_get_contents($species['url']);
+		$this->info = get_object_vars(json_decode($data_json));
 	}
 	public function getMoves()
 	{
