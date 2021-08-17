@@ -96,34 +96,36 @@ class Pokedex
 		$json_data = file_get_contents($url['url']);
 		$evo_data = get_object_vars(json_decode($json_data));
 		$evo_chain = get_object_vars($evo_data['chain']);
-		$evo_data = $evo_chain['evolves_to'];
+		$evolucion = $evo_chain['evolves_to'];
 
-		if(!empty($evo_data))
+		if(empty($evolucion))
 		{
-			$evo_data = get_object_vars($evo_data[0]);
-			
-			//Evo 1 (la última)
-			$evo_data = $evo_data['evolves_to'];
-			$evo1 = get_object_vars($evo_data[0]);
-			$evo1 = get_object_vars($evo1['species']);
-			$this->evoPath[1] = $evo1['name'];
-
-			//Evo 2 
-			$evo2 = $evo_chain;
-			//$evo2 = $evo2['name'];
-			
-			$this->evoPath[2] = $evo2;	
+			$this->evoPath['n'] = "";
 		}
 		else
 		{
-			$this->evoPath[1] = "No hay evolución";
+			$evo0 = get_object_vars($evo_chain['species']);
+			$this->evoPath[0] = $evo0['name'];
+
+			$evo1 = $evo_chain['evolves_to'];
+			$evo1 = get_object_vars($evo1[0]);
+			$evo1 = get_object_vars($evo1['species']);
+			$this->evoPath[1] = $evo1['name'];
+
+			$evo2 = $evo_chain['evolves_to'];
+			$evo2 = get_object_vars($evo2[0]);
+			$evo2 = $evo2['evolves_to'];
+			$evo2 = get_object_vars($evo2[0]);
+			if (empty($evo2['evolves_to']))
+			{
+				$evo2 = get_object_vars($evo2['species']);
+				$this->evoPath[2] = $evo2['name'];
+			}
+			else
+			{
+				$this->evoPath[2] = "no vacia";
+			}
 		}
-
-		/*
-		if(!is_null($evo_data))
-		{
-
-		}*/
 	}
 	private function getMoves()
 	{

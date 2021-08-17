@@ -28,37 +28,24 @@ if(isset($_POST['submit']))
 			echo "<h2>General Info:</h2>";
 			echo "<p>".$pokedex->generalInfo."</p><br>";
 			
-			echo "<h3>Evo 1:</h3>";
-			if(isset($pokedex->evoPath[1]))
-				{
-					echo "<pre>";
-					var_dump($pokedex->evoPath[1]);
-					echo "</pre>";
-				}
-
-			echo "<h3>Evo 2:</h3>";
-			if(isset($pokedex->evoPath[2]))
-				{
-					echo "<pre>";
-					var_dump($pokedex->evoPath[2]);
-					echo "</pre>";
-				}
-			
-
-			$moves = $pokedex->movimientos;
-			$moves = implode(" | ", $moves);
-			echo "<label for='ataques'>Moves:</label><fieldset id='ataques'>".$moves."</fieldset><br>";
-
-
-			echo "<h1>\$pokedex->info</h1>";
-			echo "<pre>";
-			var_dump($pokedex->info);
-			echo "</pre>";		
-		}
-		else
-		{
-			echo "error!";
-		}
+			echo "<h2> EvoPath </h2>";
+			if(!isset($pokedex->evoPath['n']))
+			{
+				echo "<h4>evo 1</h4><pre>";
+				var_dump($pokedex->evoPath[0]);
+				echo "</pre>";
+				echo "<h4>evo2</h4><pre>";
+				var_dump($pokedex->evoPath[1]);
+				echo "</pre>";
+				echo "<h4>evo3</h4><pre>";
+				var_dump($pokedex->evoPath[2]);
+				echo "</pre>";
+			}
+			else
+			{
+				echo "No tiene evoluciones <br><br>";
+			}
+	}
 }
 else
 {
