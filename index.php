@@ -21,18 +21,39 @@ if(isset($_POST['submit']))
 			echo $pokedex->img;
 			echo "<br>";
 
-			echo "<h2>Tipos: ".$pokedex->tipos."</h2>";
+			echo "<h2>Type: ".$pokedex->tipos."</h2>";
+			echo "<h2>Shape: ".$pokedex->shape."</h2>";
+			echo "<h2>Habitat: ".$pokedex->habitat."</h2>";
+
+			echo "<h2>General Info:</h2>";
+			echo "<p>".$pokedex->generalInfo."</p><br>";
+			
+			echo "<h3>Evo 1:</h3>";
+			if(isset($pokedex->evoPath[1]))
+				{
+					echo "<pre>";
+					var_dump($pokedex->evoPath[1]);
+					echo "</pre>";
+				}
+
+			echo "<h3>Evo 2:</h3>";
+			if(isset($pokedex->evoPath[2]))
+				{
+					echo "<pre>";
+					var_dump($pokedex->evoPath[2]);
+					echo "</pre>";
+				}
+			
 
 			$moves = $pokedex->movimientos;
 			$moves = implode(" | ", $moves);
-			echo "<label for='ataques'>Ataques que puede aprender:</label><fieldset id='ataques'>".$moves."</fieldset>";
-			echo "<br>";
+			echo "<label for='ataques'>Moves:</label><fieldset id='ataques'>".$moves."</fieldset><br>";
 
+
+			echo "<h1>\$pokedex->info</h1>";
 			echo "<pre>";
 			var_dump($pokedex->info);
-			echo "</pre>";
-					
-
+			echo "</pre>";		
 		}
 		else
 		{

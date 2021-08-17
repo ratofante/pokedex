@@ -7,9 +7,15 @@ class Pokedex
 	public $pokemon = [];
 	public $nombre;
 	public $img;
-	public $movimientos =[];
-	public $info;
 	public $tipos;
+	public $info;
+	public $habitat;
+	public $shape;
+	public $generalInfo;
+	public $evoPath = [];
+	public $movimientos =[];
+	
+
 
 	public function __construct($id)
 	{
@@ -21,6 +27,7 @@ class Pokedex
 		$this->getMoves();
 		$this->getType();
 		$this->getInfo();
+		$this->evoPath();
 	}
 	public function getName()
 	{	
@@ -48,13 +55,77 @@ class Pokedex
 		}
 		$this->tipos = implode(" - ", $resultado);
 	}
-	public function getInfo()
+	private function getInfo()
 	{
 		$species = get_object_vars($this->pokemon['species']);
 		$data_json = file_get_contents($species['url']);
 		$this->info = get_object_vars(json_decode($data_json));
+
+		// Hasta aquí la Info Base.
+
+		// Habitat
+		$habitat_obj_array = get_object_vars($this->info['habitat']);
+		$this->habitat = $habitat_obj_array['name'];
+
+		//Shape
+		$shape_obj_array = get_object_vars($this->info['shape']);
+		$this->shape = $shape_obj_array['name'];
+
+		//Flavor Text -- generalInfo
+		$flavor_text_array = $this->info['flavor_text_entries'];
+		/*$array = get_object_vars($flavor_text_array[0]);
+		$this->generalInfo = $array['flavor_text'];
+		*/
+		$condition = false;
+		for($i=0;$condition==false;$i++)
+		{
+			$array = get_object_vars($flavor_text_array[$i]);
+			$lng = get_object_vars($array['language']);
+			$vrs = get_object_vars($array['version']);
+			$this->generalInfo = $array['flavor_text'];
+			if($lng['name'] == 'en' && $vrs['name'] == 'red')
+			{
+				$condition = true;
+				$this->generalInfo = $array['flavor_text'];
+			}
+		}
 	}
-	public function getMoves()
+	private function evoPath()
+	{
+		$url = get_object_vars($this->info['evolution_chain']);
+		$json_data = file_get_contents($url['url']);
+		$evo_data = get_object_vars(json_decode($json_data));
+		$evo_chain = get_object_vars($evo_data['chain']);
+		$evo_data = $evo_chain['evolves_to'];
+
+		if(!empty($evo_data))
+		{
+			$evo_data = get_object_vars($evo_data[0]);
+			
+			//Evo 1 (la última)
+			$evo_data = $evo_data['evolves_to'];
+			$evo1 = get_object_vars($evo_data[0]);
+			$evo1 = get_object_vars($evo1['species']);
+			$this->evoPath[1] = $evo1['name'];
+
+			//Evo 2 
+			$evo2 = $evo_chain;
+			//$evo2 = $evo2['name'];
+			
+			$this->evoPath[2] = $evo2;	
+		}
+		else
+		{
+			$this->evoPath[1] = "No hay evolución";
+		}
+
+		/*
+		if(!is_null($evo_data))
+		{
+
+		}*/
+	}
+	private function getMoves()
 	{
 		$movesArray = $this->pokemon['moves'];
 		for ($i=0; $i < count($movesArray); $i++)
