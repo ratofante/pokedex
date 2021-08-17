@@ -97,13 +97,33 @@ class Pokedex
 		$evo_data = get_object_vars(json_decode($json_data));
 		$evo_chain = get_object_vars($evo_data['chain']);
 		$evolucion = $evo_chain['evolves_to'];
+		$this->evoPath['evo_count'] = $evolucion;
 
 		if(empty($evolucion))
 		{
-			$this->evoPath['n'] = "";
+			$this->evoPath['case'] = "no-evo";
+		}
+		elseif (count($this->evoPath['evo_count']) > 1) 
+		{
+			$this->evoPath['case'] = "special";
+			
+			for($i=0; $i < 3; $i++)
+			{
+				$evo = get_object_vars($evolucion[$i]);
+				$item = $evo['evolution_details'];
+				$item = get_object_vars($item[0]);
+				if($item == null){break;}
+				$item = get_object_vars($item['item']);
+				$evo = get_object_vars($evo['species']);
+				
+				$this->evoPath['special']['evo'][$i] = $evo['name'];
+				$this->evoPath['special']['item'][$i] = $item['name'];		
+			}
 		}
 		else
-		{
+		{	
+			$this->evoPath['case'] = "normal";
+			
 			$evo0 = get_object_vars($evo_chain['species']);
 			$this->evoPath[0] = $evo0['name'];
 

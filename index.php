@@ -26,24 +26,31 @@ if(isset($_POST['submit']))
 			echo "<h2>Habitat: ".$pokedex->habitat."</h2>";
 
 			echo "<h2>General Info:</h2>";
-			echo "<p>".$pokedex->generalInfo."</p><br>";
+			echo "<p><pre>".$pokedex->generalInfo."</pre></p><br>";
 			
 			echo "<h2> EvoPath </h2>";
-			if(!isset($pokedex->evoPath['n']))
-			{
-				echo "<h4>evo 1</h4><pre>";
-				var_dump($pokedex->evoPath[0]);
-				echo "</pre>";
-				echo "<h4>evo2</h4><pre>";
-				var_dump($pokedex->evoPath[1]);
-				echo "</pre>";
-				echo "<h4>evo3</h4><pre>";
-				var_dump($pokedex->evoPath[2]);
-				echo "</pre>";
-			}
-			else
-			{
-				echo "No tiene evoluciones <br><br>";
+			switch ($pokedex->evoPath['case']) {
+				case 'special':				
+					for($i=0; $i < 3; $i++)
+					{
+						echo $pokedex->evoPath['special']['evo'][$i]." - ";
+						echo $pokedex->evoPath['special']['item'][$i]."<br>";
+					}
+					break;
+				case 'no-evo':
+					echo "No tiene evolución";
+					break;
+				default:
+					echo "<h4>evo 1</h4><pre>";
+					var_dump($pokedex->evoPath[0]);
+					echo "</pre>";
+					echo "<h4>evo2</h4><pre>";
+					var_dump($pokedex->evoPath[1]);
+					echo "</pre>";
+					echo "<h4>evo3</h4><pre>";
+					var_dump($pokedex->evoPath[2]);
+					echo "</pre>";
+					break;
 			}
 	}
 }
