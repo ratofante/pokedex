@@ -13,7 +13,9 @@ class Pokedex
 	public $shape;
 	public $generalInfo;
 	public $evoPath = [];
-	public $movimientos =[];
+	public $movimientos =[]; //Devuelve el array completo de movimientos
+	public $moves; //getMoves() Devuelve STRING con cada move separado por |
+	public $test;
 	
 
 
@@ -22,23 +24,25 @@ class Pokedex
 		$this->url .= $id;
 		$data_json = file_get_contents($this->url);
 		$this->pokemon = get_object_vars(json_decode($data_json));
-		$this->getName();
-		$this->getImg();
-		$this->getMoves();
-		$this->getType();
+		//$this->getName();
+		//$this->getImg();
+		//$this->getMoves();
+		//$this->getType();
 		$this->getInfo();
 		$this->evoPath();
 	}
 	public function getName()
 	{	
 		$this->nombre = $this->pokemon['name'];
+		return $this->nombre;
 	}
 	public function getImg()
 	{
 		$img = get_object_vars($this->pokemon['sprites']);
 		$img = get_object_vars($img['other']);
 		$img = get_object_vars($img['official-artwork']);
-		$this->img = "<img src='".$img['front_default']."' style='width:100px;height:100px'>"; 	
+		$this->img = $img['front_default'];
+		return $this->img;
 	}
 	public function getType()
 	{
@@ -54,8 +58,9 @@ class Pokedex
 			$resultado[] = $tipos[$key]['name'];
 		}
 		$this->tipos = implode(" - ", $resultado);
+		return $this->tipos;
 	}
-	private function getInfo()
+	public function getInfo()
 	{
 		$species = get_object_vars($this->pokemon['species']);
 		$data_json = file_get_contents($species['url']);
@@ -90,7 +95,7 @@ class Pokedex
 			}
 		}
 	}
-	private function evoPath()
+	public function evoPath()
 	{
 		$url = get_object_vars($this->info['evolution_chain']);
 		$json_data = file_get_contents($url['url']);
@@ -99,25 +104,30 @@ class Pokedex
 		$evolucion = $evo_chain['evolves_to'];
 		$this->evoPath['evo_count'] = $evolucion;
 
+		// CASOS DONDE NO HAY EVOLUCIÓN
 		if(empty($evolucion))
 		{
 			$this->evoPath['case'] = "no-evo";
 		}
+		// CASOS RAROS (MEOWTH, EEVEE)
 		elseif (count($this->evoPath['evo_count']) > 1) 
 		{
 			$this->evoPath['case'] = "special";
 			
-			for($i=0; $i < 3; $i++)
+			for($i=0; $i < count($this->evoPath['evo_count']); $i++)
 			{
 				$evo = get_object_vars($evolucion[$i]);
 				$item = $evo['evolution_details'];
 				$item = get_object_vars($item[0]);
 				if($item == null){break;}
-				$item = get_object_vars($item['item']);
+
+				if($item['item'] != null)
+				{
+					$item = get_object_vars($item['item']);
+					$this->evoPath['special']['item'][$i] = $item['name'];
+				}
 				$evo = get_object_vars($evo['species']);
-				
 				$this->evoPath['special']['evo'][$i] = $evo['name'];
-				$this->evoPath['special']['item'][$i] = $item['name'];		
 			}
 		}
 		else
@@ -127,6 +137,13 @@ class Pokedex
 			$evo0 = get_object_vars($evo_chain['species']);
 			$this->evoPath[0] = $evo0['name'];
 
+			// TESTEANDO SACAR IMG DE LAS EVOLUCIONES.
+			$url = $evo0['url'];
+			$json_data = file_get_contents($url);
+			$data = json_decode($json_data);
+			$this->test = $data;
+
+
 			$evo1 = $evo_chain['evolves_to'];
 			$evo1 = get_object_vars($evo1[0]);
 			$evo1 = get_object_vars($evo1['species']);
@@ -135,19 +152,23 @@ class Pokedex
 			$evo2 = $evo_chain['evolves_to'];
 			$evo2 = get_object_vars($evo2[0]);
 			$evo2 = $evo2['evolves_to'];
-			$evo2 = get_object_vars($evo2[0]);
-			if (empty($evo2['evolves_to']))
+
+			if(!empty($evo2))
 			{
-				$evo2 = get_object_vars($evo2['species']);
-				$this->evoPath[2] = $evo2['name'];
+				$evo2 = get_object_vars($evo2[0]);
+				if (empty($evo2['evolves_to']))
+				{
+					$evo2 = get_object_vars($evo2['species']);
+					$this->evoPath[2] = $evo2['name'];
+				}
 			}
 			else
 			{
-				$this->evoPath[2] = "no vacia";
+				$this->evoPath[2] = false;
 			}
 		}
 	}
-	private function getMoves()
+	public function getMoves()
 	{
 		$movesArray = $this->pokemon['moves'];
 		for ($i=0; $i < count($movesArray); $i++)
@@ -156,6 +177,13 @@ class Pokedex
 			 $movimiento = get_object_vars($listaMovimientos[$i]['move']);
 			 $this->movimientos[$i] = $movimiento['name'];
 		}
+		$this->moves = implode(" | ", $this->movimientos);
+		return $this->moves;
+	}
+	function getPokemon($id)
+	{
+		$nuevoPokemon = new static($id);
+		return $nuevoPokemon;
 	}
 
 
