@@ -22,8 +22,8 @@ if(isset($_POST['submit']))
 		echo "<br>";
 
 		echo "<h2>Type: ".$pokedex->getType()."</h2>";
-		echo "<h2>Shape: ".$pokedex->shape."</h2>";
-		echo "<h2>Habitat: ".$pokedex->habitat."</h2>";
+		echo "<h2>Shape: ".$pokedex->getShape()."</h2>";
+		echo "<h2>Habitat: ".$pokedex->getHabitat()."</h2>";
 
 
 		echo "<h2>Test:</h2>";
@@ -32,7 +32,7 @@ if(isset($_POST['submit']))
 		echo "</pre><br>";
 
 		echo "<h2>General Info:</h2>";
-		echo "<p><pre>".$pokedex->generalInfo."</pre></p><br>";
+		echo "<p><pre>".$pokedex->getGeneralInfo()."</pre></p><br>";
 			
 		echo "<h2> EvoPath </h2>";
 		switch ($pokedex->evoPath['case'])

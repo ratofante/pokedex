@@ -65,22 +65,22 @@ class Pokedex
 		$species = get_object_vars($this->pokemon['species']);
 		$data_json = file_get_contents($species['url']);
 		$this->info = get_object_vars(json_decode($data_json));
-
-		// Hasta aquí la Info Base.
-
-		// Habitat
+	}
+	public function getHabitat()
+	{
 		$habitat_obj_array = get_object_vars($this->info['habitat']);
 		$this->habitat = $habitat_obj_array['name'];
-
-		//Shape
+		return $this->habitat;
+	}
+	public function getShape()
+	{
 		$shape_obj_array = get_object_vars($this->info['shape']);
 		$this->shape = $shape_obj_array['name'];
-
-		//Flavor Text -- generalInfo
+		return $this->shape;		
+	}
+	public function getGeneralInfo()
+	{
 		$flavor_text_array = $this->info['flavor_text_entries'];
-		/*$array = get_object_vars($flavor_text_array[0]);
-		$this->generalInfo = $array['flavor_text'];
-		*/
 		$condition = false;
 		for($i=0;$condition==false;$i++)
 		{
@@ -94,6 +94,7 @@ class Pokedex
 				$this->generalInfo = $array['flavor_text'];
 			}
 		}
+		return $this->generalInfo;
 	}
 	public function evoPath()
 	{
@@ -185,7 +186,4 @@ class Pokedex
 		$nuevoPokemon = new static($id);
 		return $nuevoPokemon;
 	}
-
-
-
 }
