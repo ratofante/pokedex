@@ -22,10 +22,6 @@ class Pokedex
 		$this->url .= $id;
 		$data_json = file_get_contents($this->url);
 		$this->pokemon = get_object_vars(json_decode($data_json));
-		//$this->getName();
-		//$this->getImg();
-		//$this->getMoves();
-		//$this->getType();
 		$this->getInfo();
 		$this->evoPath();
 	}
@@ -214,10 +210,6 @@ class Pokedex
 					$this->evoPath['id'][2] = $url_id;
 					$this->evoPath['evo'][2] = $evo2['name'];
 				}
-			}
-			else
-			{
-				$this->evoPath['evo'][2] = false;
 			}
 		}
 	}
