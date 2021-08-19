@@ -15,9 +15,7 @@ class Pokedex
 	public $evoPath = [];
 	public $movimientos =[]; //Devuelve el array completo de movimientos
 	public $moves; //getMoves() Devuelve STRING con cada move separado por |
-	public $test;
-	
-
+	public $test;	
 
 	public function __construct($id)
 	{
@@ -234,10 +232,5 @@ class Pokedex
 		}
 		$this->moves = implode(" | ", $this->movimientos);
 		return $this->moves;
-	}
-	function getPokemon($id)
-	{
-		$nuevoPokemon = new static($id);
-		return $nuevoPokemon;
 	}
 }
