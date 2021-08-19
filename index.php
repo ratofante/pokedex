@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
 	if(is_numeric($id) && $id < 151)
 	{	
 		$pokemon = new Pokedex($id);
-		$smarty->register_Object('pokemon',$pokemon);
+		$smarty->registerObject('pokemon',$pokemon);
 
 		$name = $pokemon->getName();
 		$img = $pokemon->getImg();

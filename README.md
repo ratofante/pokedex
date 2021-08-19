@@ -31,5 +31,26 @@ De esta manera sabemos con qué estamos lideando.
 [id_1] --> Id de la 2da evo [1]
 [id_2] --> ID de la 3ra evo [2].
 
-Caso EEVEE:
-['']
+ EEVEE:
+['case'] == 'special'
+En estos se general el siguiente array:
+
+evoPath['special'] 
+{
+  ['item'] 
+  {
+    [index-n] -> item correspondiente en caso de haberlo.
+  }
+  ['evo']
+  {
+    [index-n] -> nombre de la evolucion correspondiente
+  }
+  ['id']
+  {
+    ['indez-n'] -> Con la id correspondiente
+  }
+}
+
+evoPath['evo'][0]
+evoPath['id'][0]
+evoPath['item'][0]
