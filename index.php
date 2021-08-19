@@ -1,13 +1,8 @@
 <?php
-
 //INCLUDES
 include("includes/includes.php");
 $model = new Model();
 $smarty = new Smarty();
-
-// Si sesión no abierta:
-
-
 
 if(isset($_POST['submit']))
 {
@@ -16,7 +11,6 @@ if(isset($_POST['submit']))
 	if(is_numeric($id) && $id < 151)
 	{	
 		$pokemon = new Pokedex($id);
-		$smarty->registerObject('pokemon',$pokemon);
 
 		$name = $pokemon->getName();
 		$img = $pokemon->getImg();
@@ -25,37 +19,47 @@ if(isset($_POST['submit']))
 		$habitat = $pokemon->getHabitat();
 		$generalInfo = $pokemon->getGeneralInfo();
 
-		var_dump($name);
-		echo "<br><br>";
-		var_dump($img);
-		echo "<br><br>";
-		var_dump($type);
-		echo "<br><br>";
-		var_dump($shape);
-		echo "<br><br>";
-		var_dump($habitat);
-		echo "<br><br>";
-		var_dump($generalInfo);
-		echo "<br><br>";
-
 		$smarty->assign('name', $name);
 		$smarty->assign('img', $img);
-		//$smarty->assing('shape', $shape);
-		//$smarty->assing('type', $type);
-		//$smarty->assing('shape', $shape);
-		//$smarty->assign('habitat', $habitat);
-		$smarty->assing('generalInfo', $generalInfo);
+		$smarty->assign('shape', $shape);
+		$smarty->assign('type', $type);
+		$smarty->assign('shape', $shape);
+		$smarty->assign('habitat', $habitat);
+		$smarty->assign('generalInfo', $generalInfo);
 
-		//$smarty->registerObject('pokemon', $pokemon);
-		/*
-		$smarty->assign('name', $pokemon->getName());
-		$smarty->assign('main_img', $pokemon->getImg());
-		$smarty->assign('type', $pokemon->getType());
-		$smarty->assign('shape', $pokemon->getShape());
-		$smarty->assign('habitat', $pokemon->getHabitat());
-		$smarty->assing('generalInfo', $pokemon->getGeneralInfo());
-		*/
+		/*$evo = $pokemon->evoPath['evo'];
+		$evo_id = $pokemon->evoPath['id'];
+		$evo_item = (isset($pokemon->evoPath['item'])) ? $pokemon->evoPath['item'] : false;*/
+		echo "<pre>";
+		//var_dump($evo);
+		echo "</pre><br>";
 		
+		switch($pokemon->evoPath['case'])
+		{
+			case 'special':
+
+				break;
+			case 'no-evo':
+
+				break;
+			default:
+				$evo = $pokemon->evoPath['evo'];
+				$evo_id = $pokemon->evoPath['id'];
+				$evo_item = (isset($pokemon->evoPath['item'])) ? $pokemon->evoPath['item'] : false;
+				break;	
+		}	
+		
+		echo "<pre>";
+		var_dump($evo);
+		echo "</pre><br>";
+		echo "<pre>";
+		var_dump($evo_id);
+		echo "<pre>";
+		echo "</pre><br>";
+		echo "<pre>";
+		var_dump($evo_item);
+		echo "</pre><br>";
+
 		$smarty->display('index.tpl');
 
 

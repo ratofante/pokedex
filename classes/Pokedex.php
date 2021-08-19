@@ -148,7 +148,7 @@ class Pokedex
 			$this->evoPath['case'] = "normal";
 			
 			$evo0 = get_object_vars($evo_chain['species']);
-			$this->evoPath[0] = $evo0['name'];
+			$this->evoPath['evo'][0] = $evo0['name'];
 
 			/************** ID EVO CHAIN 1 **********/
 			$url = $evo0['url'];
@@ -168,7 +168,7 @@ class Pokedex
 			{
 				$url_id = substr($url_id,0,3);
 			}
-			$this->evoPath['id_0'] = $url_id;
+			$this->evoPath['id'][0] = $url_id;
 			/****************************************/
 
 
@@ -187,8 +187,8 @@ class Pokedex
 			{
 				$url_id = substr($url_id,0,3);
 			}
-			$this->evoPath['id_1'] = $url_id;
-			$this->evoPath[1] = $evo1['name'];
+			$this->evoPath['id'][1] = $url_id;
+			$this->evoPath['evo'][1] = $evo1['name'];
 			/*****************************************/
 
 			
@@ -213,13 +213,13 @@ class Pokedex
 					{
 						$url_id = substr($url_id,0,3);
 					}
-					$this->evoPath['id_2'] = $url_id;
-					$this->evoPath[2] = $evo2['name'];
+					$this->evoPath['id'][2] = $url_id;
+					$this->evoPath['evo'][2] = $evo2['name'];
 				}
 			}
 			else
 			{
-				$this->evoPath[2] = false;
+				$this->evoPath['evo'][2] = false;
 			}
 		}
 	}
