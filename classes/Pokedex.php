@@ -138,17 +138,48 @@ class Pokedex
 			$evo0 = get_object_vars($evo_chain['species']);
 			$this->evoPath[0] = $evo0['name'];
 
-			// TESTEANDO SACAR IMG DE LAS EVOLUCIONES.
+			/************** ID EVO CHAIN 1 **********/
 			$url = $evo0['url'];
 			$json_data = file_get_contents($url);
 			$data = json_decode($json_data);
-			$this->test = $data;
+			$data = get_object_vars($data);
+			$varieties = $data['varieties'];
+			$varieties = get_object_vars($varieties[0]);
+			$varieties = get_object_vars($varieties['pokemon']);
+			$url_id = $varieties['url'];
+			$url_id = substr($url_id, strpos($url_id, 'pokemon/') + strlen('pokemon/'));
+			if(strlen($url_id) == 3)
+			{
+				$url_id = substr($url_id,0,2);
+			}
+			else
+			{
+				$url_id = substr($url_id,0,3);
+			}
+			$this->evoPath['id_0'] = $url_id;
+			/****************************************/
 
 
+			/******** ID DE SEGUNDA EVOLUCION *******/
 			$evo1 = $evo_chain['evolves_to'];
 			$evo1 = get_object_vars($evo1[0]);
 			$evo1 = get_object_vars($evo1['species']);
+			$url_id = $evo1['url'];
+			//$this->test = $url_id;
+			$url_id = substr($url_id, strpos($url_id, 'species/') + strlen('species/'));
+			if(strlen($url_id) == 3)
+			{
+				$url_id = substr($url_id,0,2);
+			}
+			else
+			{
+				$url_id = substr($url_id,0,3);
+			}
+			$this->evoPath['id_1'] = $url_id;
 			$this->evoPath[1] = $evo1['name'];
+			/*****************************************/
+
+			
 
 			$evo2 = $evo_chain['evolves_to'];
 			$evo2 = get_object_vars($evo2[0]);
@@ -160,6 +191,17 @@ class Pokedex
 				if (empty($evo2['evolves_to']))
 				{
 					$evo2 = get_object_vars($evo2['species']);
+					$url_id = $evo2['url'];
+					$url_id = substr($url_id, strpos($url_id, 'species/') + strlen('species/'));
+					if(strlen($url_id) == 3)
+					{
+						$url_id = substr($url_id,0,2);
+					}
+					else
+					{
+						$url_id = substr($url_id,0,3);
+					}
+					$this->evoPath['id_2'] = $url_id;
 					$this->evoPath[2] = $evo2['name'];
 				}
 			}

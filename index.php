@@ -16,20 +16,17 @@ if(isset($_POST['submit']))
 	if(is_numeric($id) && $id < 151)
 	{
 		$pokedex = new Pokedex($id);
-		echo "<h1>".$pokedex->getName()."</h1>";
-		echo "<br>";
-		echo "<img src='".$pokedex->getImg()."' style='width:100px;height:100px'>";
-		echo "<br>";
+
+		echo"<pre>";
+		var_dump($pokedex->evoPath);
+		echo "</pre><br>";
+
+		echo "<h1>".$pokedex->getName()."</h1><br>";
+		echo "<img src='".$pokedex->getImg()."' style='width:100px;height:100px'><br>";
 
 		echo "<h2>Type: ".$pokedex->getType()."</h2>";
 		echo "<h2>Shape: ".$pokedex->getShape()."</h2>";
 		echo "<h2>Habitat: ".$pokedex->getHabitat()."</h2>";
-
-
-		echo "<h2>Test:</h2>";
-		echo "<pre>";
-		//var_dump($pokedex->test);
-		echo "</pre><br>";
 
 		echo "<h2>General Info:</h2>";
 		echo "<p><pre>".$pokedex->getGeneralInfo()."</pre></p><br>";
