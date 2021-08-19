@@ -30,3 +30,6 @@ De esta manera sabemos con qué estamos lideando.
 [id_0] --> Id de la 1era evo [0]
 [id_1] --> Id de la 2da evo [1]
 [id_2] --> ID de la 3ra evo [2].
+
+Caso EEVEE:
+['']

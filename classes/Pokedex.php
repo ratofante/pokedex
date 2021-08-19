@@ -128,6 +128,18 @@ class Pokedex
 					$this->evoPath['special']['item'][$i] = $item['name'];
 				}
 				$evo = get_object_vars($evo['species']);
+				$url_id = $evo['url'];
+				$url_id = substr($url_id, strpos($url_id, 'species/') + strlen('species/'));
+				$this->test = $url_id;
+				if(strlen($url_id) == 3)
+				{
+					$url_id = substr($url_id,0,2);
+				}
+				else
+				{
+					$url_id = substr($url_id,0,3);
+				}
+				$this->evoPath['special']['id'][$i] = $url_id;
 				$this->evoPath['special']['evo'][$i] = $evo['name'];
 			}
 		}
