@@ -8,7 +8,7 @@ if(isset($_POST['submit']))
 {
 	$model->setData("id_pokemon",$model->getInput($_POST['id_pokemon']));
 	$id = $model->getData("id_pokemon");
-	if(is_numeric($id) && $id < 151)
+	if(is_numeric($id) && $id <= 151)
 	{	
 		$pokemon = new Pokedex($id);
 
@@ -67,16 +67,18 @@ if(isset($_POST['submit']))
 		}	
 		$moves_string = $pokemon->getMoves();
 		$smarty->assign('moves_string', $moves_string);
-		$moves_array = $pokemon->movimientos;
-		$smarty->assign('moves_array', $moves_array);
-
-		$smarty->display('index.tpl');
-	}
-
-	
+		//$moves_array = $pokemon->movimientos;
+		//$smarty->assign('moves_array', $moves_array);
+		$smarty->display('header.tpl');
+		$smarty->display('search.tpl');
+		$smarty->display('pokecard.tpl');
+		$smarty->display('footer.tpl');
+	}	
 }
 else
-{
-	header("Location:views/home.html");
+{	
+	$smarty->display('header.tpl');
+	$smarty->display('search.tpl');
+	$smarty->display('footer.tpl');
 }
 

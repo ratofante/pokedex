@@ -85,7 +85,9 @@ class Pokedex
 			if($lng['name'] == 'en' && $vrs['name'] == 'red')
 			{
 				$condition = true;
-				$this->generalInfo = $array['flavor_text'];
+				$generalInfo = trim($array['flavor_text']);
+				$generalInfo = htmlentities($generalInfo);
+				$this->generalInfo = $generalInfo;
 			}
 		}
 		return $this->generalInfo;

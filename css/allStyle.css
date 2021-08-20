@@ -1,0 +1,55 @@
+/***********************
+***  GENERAL
+***
+***********************/
+* {margin: 0px; padding: 0px; box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
+/*font-family: 'Klee One', cursive;*/
+body 
+{
+	font-family: 'Klee One', cursive;
+}
+.carta 
+{	
+	width: 90%;
+	margin: 10px auto;
+	padding: 0;
+	border: 8px solid #252552;
+    border-radius: 4px;
+    box-shadow: 0px 3px 4px 1px #e7e6f4;
+}
+.div_interior
+{
+	box-shadow: inset 55px 11px 49px 13px #12109226;
+}
+.align_center
+{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+.row
+{
+	display: flex;
+	flex-flow: row;
+}
+/***********************
+***  search
+***
+***********************/
+
+/***********************
+***  Pokecard
+***
+***********************/
+#card_name
+{
+	margin-left: 8%;
+    text-transform: capitalize;
+    font-size: 2.2rem;
+}
+#card_main_img
+{
+	width: 50%;
+	height: 50%;
+}

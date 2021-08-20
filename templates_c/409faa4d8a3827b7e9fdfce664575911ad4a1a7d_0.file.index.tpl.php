@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-20 01:16:29
+/* Smarty version 3.1.39, created on 2021-08-20 18:59:45
   from 'C:\xampp\htdocs\pokedex\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_611ee64d0bfb10_02073162',
+  'unifunc' => 'content_611fdf81220e70_92752448',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '409faa4d8a3827b7e9fdfce664575911ad4a1a7d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pokedex\\templates\\index.tpl',
-      1 => 1629414941,
+      1 => 1629472913,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_611ee64d0bfb10_02073162 (Smarty_Internal_Template $_smarty_tpl) {
+function content_611fdf81220e70_92752448 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
 </head>
 <body>
@@ -41,6 +42,7 @@ function content_611ee64d0bfb10_02073162 (Smarty_Internal_Template $_smarty_tpl)
 </h2>
 <pre><?php echo $_smarty_tpl->tpl_vars['generalInfo']->value;?>
 </pre>
+<?php if ((isset($_smarty_tpl->tpl_vars['evo']->value))) {?>
 <ul>
 	<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['evo']->value, 'value');
@@ -69,7 +71,8 @@ $_smarty_tpl->tpl_vars['value']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </ul>
-<?php if ((isset($_smarty_tpl->tpl_vars['evo_item']->value))) {?>
+<?php }
+if ((isset($_smarty_tpl->tpl_vars['evo_item']->value))) {?>
 <fieldset>
 	<legend>Items</legend>
 	<ol>
@@ -92,21 +95,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 	<?php echo $_smarty_tpl->tpl_vars['moves_string']->value;?>
 
 </fieldset>
-<fieldset>
-	<legend>Movimientos - array</legend>
-<?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['moves_array']->value, 'value');
-$_smarty_tpl->tpl_vars['value']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['value']->value) {
-$_smarty_tpl->tpl_vars['value']->do_else = false;
-?>
-<p><?php echo $_smarty_tpl->tpl_vars['value']->value;?>
-</p>
-<?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-</fieldset>
-
 </body>
 </html><?php }
 }
