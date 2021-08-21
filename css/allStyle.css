@@ -3,11 +3,29 @@
 ***
 ***********************/
 * {margin: 0px; padding: 0px; box-sizing: border-box;}
-@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
-/*font-family: 'Klee One', cursive;*/
+/*@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Lobster&family=VT323&display=swap');
+
+font-family: 'Fira Mono', monospace; 400 / 700
+font-family: 'Lobster', cursive;
+font-family: 'VT323', monospace;
+**/
+html {font-size: 100%;}
+:root
+{
+	--normal-font: 'Fira Mono', monospace;
+	--title-font: 'Lobster', cursive;
+	--special-font: 'VT323', monospace;
+}
 body 
 {
-	font-family: 'Klee One', cursive;
+	font-family: var(--normal-font);
+	font-weight: 400;
+}
+.info_title {
+	font-family: var(--normal-font);
+	font-size: 1.8rem;
+	font-weight: 400;
+	text-align: center;
 }
 .carta 
 {	
@@ -27,6 +45,7 @@ body
 	display: flex;
 	flex-flow: column;
 	align-items: center;
+	justify-content: center;
 }
 .row
 {
@@ -34,22 +53,85 @@ body
 	flex-flow: row;
 }
 /***********************
+***  Header
+***
+***********************/
+#title 
+{
+	font-family: var(--title-font);
+	font-size: 3.5rem;
+
+}
+/***********************
 ***  search
 ***
 ***********************/
-
+#search_form
+{
+	padding: 1rem;
+}
 /***********************
 ***  Pokecard
 ***
 ***********************/
-#card_name
+.custom_fieldset
+{
+	border-width: 34px 0px 0px 0px;
+	border-color: black;
+	border-style: solid;
+}
+.legend_title
 {
 	margin-left: 8%;
     text-transform: capitalize;
     font-size: 2.2rem;
+}
+.secondary
+{
+	font-size: 1.6rem;
+    margin-right: 26%;
+    text-align: right;
+}
+.terciary
+{
+	font-size: 1.6rem;
+    margin-right: 16%;
+    text-align: right;
 }
 #card_main_img
 {
 	width: 50%;
 	height: 50%;
 }
+#generalInfo
+{
+	font-family: var(--special-font);
+	padding: 0.5rem;
+    font-size: 1.2rem;
+}
+.dos_puntos
+{
+	font-family: var(--normal-font);
+	font-weight: 700;
+	font-size: 1rem;
+}
+.info 
+{
+	font-family: var(--normal-font);
+	font-size: 1.1rem;
+}
+#shape_type_habitat table {padding: 1rem;}
+#shape_type_habitat table tr td:first-child
+{
+	text-align: right;
+}
+#shape_type_habitat table tr td:nth-child(2)
+{
+	text-align: left;
+}
+
+
+/***********************
+***  footer
+***
+***********************/
