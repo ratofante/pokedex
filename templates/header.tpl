@@ -10,12 +10,12 @@
 	<link rel="stylesheet" type="text/css" href="css/allStyle.css">
 </head>
 <body>
-<header>
+<header class="align_justify_center">
 	<div id="header_title">
 		<h1>Pokedex</h1>
 		<h4>by RGW</h4>
 	</div>
 	<div id="header_logo">
-		<img src="" alt="Logo">
+		<img src="img/pokeball2.png" alt="Logo">
 	</div>
 </header>

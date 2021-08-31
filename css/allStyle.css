@@ -15,22 +15,105 @@ html {font-size: 100%;}
 	--normal-font: 'Fira Mono', monospace;
 	--title-font: 'Lobster', cursive;
 	--special-font: 'VT323', monospace;
+
 }
 body 
 {
 	font-family: var(--normal-font);
 	font-weight: 400;
 }
+.align_justify_center 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.img_class {width: 100%;}
 
 /***********************
 ***  Header
 ***
 ***********************/
-
+header {
+	flex-flow: row;
+	justify-content: center;
+	margin: 25px 0px 0px 0px;
+}
+#header_title h1
+{
+	font-size: 4rem;
+    font-family: var(--title-font);
+    position: relative;
+    left: 54px;
+}
+#header_title h4
+{
+	font-family: var(--special-font);
+	position: relative;
+    left: 210px;
+    bottom: 10px;
+}
+#header_logo img
+{
+	width: 160px;
+    position: relative;
+    right: 3px;
+}
 /***********************
-***  search
+***  section_inicio
 ***
 ***********************/
+.text_section
+{
+	padding: 1rem;
+}
+.text_section h2
+{
+	text-align: center;
+	text-transform: capitalize;
+}
+.text_section p 
+{
+	padding: 0.5rem;
+}
+.img_row
+{
+	height: 190px;
+}
+/***********************
+***  search_bar
+***
+***********************/
+input#id_search
+{
+	padding: 0.1rem;
+    width: 30px;
+    font-family: var(--special-font);
+    font-size: 1rem;
+}
+#search_id_form
+{
+    flex-flow: column;
+    //border: 1px solid black;
+    margin: 10px 0px 10px 0px;
+    color: white;
+    background-color: gray;
+    //background-image: url('img/pokemons1.jpg');
+}
+#search_id_form div button
+{
+	background: none;
+    border: none;
+    width: 30px;
+}
+#search_id_form div button img
+{
+	position: relative;
+    top: 8px;
+    right: 4px;
+}
+#sugerencia_id {font-family: var(--special-font);}
+
 
 /***********************
 ***  Pokecard

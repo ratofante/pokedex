@@ -1,4 +1,10 @@
 <section>
-	<h2>Title header 2</h2>
-	<p>Maecenas nec ultricies neque, vitae tincidunt justo. In non lectus et tellus blandit aliquam et vel orci. Praesent magna est.</p>
+	<div class="text_section">
+		<h2>Welcome !</h2>
+		<p>This app is set so you can find all of the 150 original pokemons, and maybe more!</p>
+		<p>Many thanks to <a href="http://pokeapi.co">PokéApi</a> for their amazing work!</p>
+	</div>
+	<div class="img_row">
+		<img class="img_class" src="img/pokemons1.jpg" alt="Pokemons">
+	</div>
 </section>
