@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-31 18:27:57
+/* Smarty version 3.1.39, created on 2021-09-01 02:38:25
   from 'C:\xampp\htdocs\pokedex\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_612e588de8cf25_31282676',
+  'unifunc' => 'content_612ecb81e99d12_42125735',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '95b1596c3dd61f091fd6627ccb72e738c85222b3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pokedex\\templates\\header.tpl',
-      1 => 1630427261,
+      1 => 1630456661,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_612e588de8cf25_31282676 (Smarty_Internal_Template $_smarty_tpl) {
+function content_612ecb81e99d12_42125735 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>

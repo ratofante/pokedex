@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-30 18:10:34
+/* Smarty version 3.1.39, created on 2021-09-01 02:32:53
   from 'C:\xampp\htdocs\pokedex\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_612d02fabf56e1_27081215',
+  'unifunc' => 'content_612eca352abe99_38180368',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2667755fd12bcd42c8eedbc3e5a636a6eb1678b2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pokedex\\templates\\footer.tpl',
-      1 => 1630339406,
+      1 => 1630456302,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_612d02fabf56e1_27081215 (Smarty_Internal_Template $_smarty_tpl) {
+function content_612eca352abe99_38180368 (Smarty_Internal_Template $_smarty_tpl) {
 ?><footer>
 	<div class="footer_section">
 		<img src="" alt="logo_footer">
@@ -40,6 +40,7 @@ function content_612d02fabf56e1_27081215 (Smarty_Internal_Template $_smarty_tpl)
 		</ul>
 	</div>
 </footer>
+</div>
 </body>
 </html><?php }
 }

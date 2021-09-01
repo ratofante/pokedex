@@ -9,7 +9,15 @@ font-family: 'Fira Mono', monospace; 400 / 700
 font-family: 'Lobster', cursive;
 font-family: 'VT323', monospace;
 **/
-html {font-size: 100%;}
+html 
+{
+	font-size: 100%;
+	background: url('../img/cellphone_bg.jpg') no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
 :root
 {
 	--normal-font: 'Fira Mono', monospace;
@@ -21,6 +29,10 @@ body
 {
 	font-family: var(--normal-font);
 	font-weight: 400;
+	/*background-image: url('../img/cellphone_bg.jpg');
+	background-size: contain;
+	height: 100vh;
+	overflow-y: auto;*/
 }
 .align_justify_center 
 {
@@ -109,10 +121,14 @@ input#id_search
 #search_id_form div button img
 {
 	position: relative;
-    top: 8px;
-    right: 4px;
+	top: 16px;
+	right: 4px;
 }
-#sugerencia_id {font-family: var(--special-font);}
+#sugerencia_id 
+{
+	font-family: var(--special-font);
+	margin: 0 0 10px 0;
+}
 
 
 /***********************
