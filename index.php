@@ -2,13 +2,14 @@
 session_start();
 //INCLUDES
 include("includes/includes.php");
-$model = new Model();
-$smarty = new Smarty();
+$Model = new Model();
 
-$smarty->display('header.tpl');
-$smarty->display('section_inicio.tpl');
-$smarty->display('search.tpl');
-$smarty->display('section_bajada.tpl');
-$smarty->display('footer.tpl');
+$Model->load('controladores/searchId.controller.php');
+
+/*$smarty = new Smarty();
+
+
+
+*/
 
 

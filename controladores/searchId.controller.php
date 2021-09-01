@@ -1,12 +1,12 @@
 <?php
-include("includes/includes.php");
-$model = new Model();
-$smarty = new Smarty();
+include("../includes/includes.php");
+//$Model = new Model();
+$Smarty = new Smarty();
 
 if(isset($_POST['submit']))
 {
-	$model->setData("id_pokemon",$model->getInput($_POST['id_pokemon']));
-	$id = $model->getData("id_pokemon");
+	$Model->setData("id_pokemon",$Model->getInput($_POST['id_pokemon']));
+	$id = $Model->getData("id_pokemon");
 	if(is_numeric($id) && $id <= 151)
 	{	
 		$pokemon = new Pokedex($id);
@@ -18,13 +18,13 @@ if(isset($_POST['submit']))
 		$habitat = $pokemon->getHabitat();
 		$generalInfo = $pokemon->getGeneralInfo();
 
-		$smarty->assign('name', $name);
-		$smarty->assign('img', $img);
-		$smarty->assign('shape', $shape);
-		$smarty->assign('type', $type);
-		$smarty->assign('shape', $shape);
-		$smarty->assign('habitat', $habitat);
-		$smarty->assign('generalInfo', $generalInfo);
+		$Smarty->assign('name', $name);
+		$Smarty->assign('img', $img);
+		$Smarty->assign('shape', $shape);
+		$Smarty->assign('type', $type);
+		$Smarty->assign('shape', $shape);
+		$Smarty->assign('habitat', $habitat);
+		$Smarty->assign('generalInfo', $generalInfo);
 
 		echo "<pre>";
 		//var_dump($pokemon->evoPath['special']);
@@ -36,15 +36,15 @@ if(isset($_POST['submit']))
 				$evo = $pokemon->evoPath['special']['evo'];
 				$evo_id = $pokemon->evoPath['special']['id'];
 				$evo_item = (isset($pokemon->evoPath['special']['item'])) ? $pokemon->evoPath['special']['item'] : null;
-				$smarty->assign('evo', $evo);
-				$smarty->assign('evo_id', $evo_id);
-				$smarty->assign('evo_item', $evo_item);
+				$Smarty->assign('evo', $evo);
+				$Smarty->assign('evo_id', $evo_id);
+				$Smarty->assign('evo_item', $evo_item);
 				foreach($evo_id as $key)
 				{
 					$poke = new Pokedex($key);
 					$evo_img[$key] = $poke->getImg(); 
 				}
-				$smarty->assign('evo_img', $evo_img);
+				$Smarty->assign('evo_img', $evo_img);
 				break;
 			case 'no-evo':
 				break;
@@ -52,31 +52,33 @@ if(isset($_POST['submit']))
 				$evo = $pokemon->evoPath['evo'];
 				$evo_id = $pokemon->evoPath['id'];
 				$evo_item = (isset($pokemon->evoPath['item'])) ? $pokemon->evoPath['item'] : null;
-				$smarty->assign('evo', $evo);
-				$smarty->assign('evo_id', $evo_id);
-				$smarty->assign('evo_item', $evo_item);
+				$Smarty->assign('evo', $evo);
+				$Smarty->assign('evo_id', $evo_id);
+				$Smarty->assign('evo_item', $evo_item);
 				$evo_img = [];
 				foreach($evo_id as $key)
 				{
 					$poke = new Pokedex($key);
 					$evo_img[$key] = $poke->getImg();
 				}
-				$smarty->assign('evo_img', $evo_img);
+				$Smarty->assign('evo_img', $evo_img);
 				break;	
 		}	
 		$moves_string = $pokemon->getMoves();
-		$smarty->assign('moves_string', $moves_string);
+		$Smarty->assign('moves_string', $moves_string);
 		//$moves_array = $pokemon->movimientos;
-		//$smarty->assign('moves_array', $moves_array);
-		$smarty->display('header.tpl');
-		$smarty->display('search.tpl');
-		$smarty->display('pokecard.tpl');
-		$smarty->display('footer.tpl');
+		//$Smarty->assign('moves_array', $moves_array);
+		$Smarty->display('header.tpl');
+		$Smarty->display('search.tpl');
+		$Smarty->display('pokecard.tpl');
+		$Smarty->display('footer.tpl');
 	}	
 }
 else
 {	
-	$smarty->display('header.tpl');
-	$smarty->display('search.tpl');
-	$smarty->display('footer.tpl');
+	//$Smarty->display('header.tpl');
+	$Smarty->display('section_inicio.tpl');
+	$Smarty->display('search.tpl');
+	$Smarty->display('section_bajada.tpl');
+	$Smarty->display('footer.tpl');
 }

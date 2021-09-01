@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-31 19:28:48
+/* Smarty version 3.1.39, created on 2021-09-01 20:35:28
   from 'C:\xampp\htdocs\pokedex\templates\search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_612e66d08345c2_61793882',
+  'unifunc' => 'content_612fc7f0afcdf9_57711402',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '971f2c39c19af93e6468b2a78255d94ca849dbc4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pokedex\\templates\\search.tpl',
-      1 => 1630430926,
+      1 => 1630520122,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_612e66d08345c2_61793882 (Smarty_Internal_Template $_smarty_tpl) {
+function content_612fc7f0afcdf9_57711402 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="search_bar">
 	<form id="search_id_form" class="align_justify_center" action="controladores/searchId.controller.php" method="POST">
 		<div>

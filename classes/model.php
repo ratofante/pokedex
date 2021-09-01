@@ -30,4 +30,12 @@ class Model
 			return "No hay data";
 		}
 	}
+	public function load($url)
+	{
+		include($url);
+	}
+	public function redirect($url)
+	{
+		header("Location: $url");
+	}
 }
