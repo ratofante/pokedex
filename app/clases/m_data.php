@@ -1,6 +1,6 @@
 <?php
 
-class Model
+class Data
 {
 	public $data = [];
 	public $input;
@@ -37,5 +37,6 @@ class Model
 	public function redirect($url)
 	{
 		header("Location: $url");
+		exit;
 	}
 }

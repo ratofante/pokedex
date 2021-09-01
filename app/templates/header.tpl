@@ -7,7 +7,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Lobster&family=VT323&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/allStyle.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/allStyle.css">
 </head>
 <body>
 <header class="align_justify_center">
@@ -16,6 +16,6 @@
 		<h4>by RGW</h4>
 	</div>
 	<div id="header_logo">
-		<img src="img/pokeball2.png" alt="Logo">
+		<img src="resources/img/pokeball2.png" alt="Logo">
 	</div>
 </header>
