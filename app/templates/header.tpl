@@ -17,3 +17,4 @@
 		<img src="resources/img/pokeball2.png" alt="Logo">
 	</div>
 </header>
+<main>
