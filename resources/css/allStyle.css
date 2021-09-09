@@ -23,6 +23,10 @@ body
 	font-family: var(--normal-font);
 	font-weight: 400;
 }
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
 .align_justify_center 
 {
 	display: flex;
