@@ -11,11 +11,9 @@
 </head>
 <body>
 <header class="align_justify_center">
-	<div id="header_title">
-		<h1>Pokedex</h1>
-		<h4>by RGW</h4>
-	</div>
 	<div id="header_logo">
+		<h1>Pokedex</h1>
+		<h4 id="firma">by RGW</h4>	
 		<img src="resources/img/pokeball2.png" alt="Logo">
 	</div>
 </header>

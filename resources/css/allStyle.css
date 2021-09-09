@@ -3,12 +3,6 @@
 ***
 ***********************/
 * {margin: 0px; padding: 0px; box-sizing: border-box;}
-/*@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Lobster&family=VT323&display=swap');
-
-font-family: 'Fira Mono', monospace; 400 / 700
-font-family: 'Lobster', cursive;
-font-family: 'VT323', monospace;
-**/
 html 
 {
 	font-size: 100%;
@@ -23,16 +17,11 @@ html
 	--normal-font: 'Fira Mono', monospace;
 	--title-font: 'Lobster', cursive;
 	--special-font: 'VT323', monospace;
-
 }
 body 
 {
 	font-family: var(--normal-font);
 	font-weight: 400;
-	/*background-image: url('../img/cellphone_bg.jpg');
-	background-size: contain;
-	height: 100vh;
-	overflow-y: auto;*/
 }
 .align_justify_center 
 {
@@ -46,56 +35,92 @@ body
 ***  Header
 ***
 ***********************/
-header {
-	flex-flow: row;
+header
+{
+	width: 100%;
+	display: flex;
+	align-items: center;
 	justify-content: center;
-	margin: 25px 0px 0px 0px;
+	flex-flow: row;
 }
-#header_title h1
+.day_header
 {
-	font-size: 4rem;
-    font-family: var(--title-font);
-    position: relative;
-    left: 54px;
+	background-color: #0e0c0c45;
+    border-bottom: 1px solid black;
+    box-shadow: 3px 3px 3px #00000063;
+    border-radius: 8px;
 }
-#header_title h4
+.night_header
 {
+	background-color: #0e0c0c45;
+    border-bottom: 1px solid black;
+    box-shadow: 3px 3px 3px #00000063;
+    border-radius: 8px;
+}
+#header_logo 
+{
+	align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    width: 400px;
+    height: 150px;;
+}
+h1
+{
+	font-size: 5rem;
+	font-family: var(--title-font);
+	color: white;
+	padding: 20px 0px 0px 20px;
+}
+#firma 
+{
+	font-size: 2rem;
 	font-family: var(--special-font);
 	position: relative;
-    left: 210px;
-    bottom: 10px;
+	bottom: 18px;
+	left: 122px;
+	color: white;
+	letter-spacing: 6px;
 }
 #header_logo img
 {
-	width: 160px;
+	width: 200px;
     position: relative;
-    right: 3px;
+    left: 184px;
+    bottom: 127px;
 }
 /***********************
 ***  section_inicio
 ***
 ***********************/
-.text_section
+main
 {
-	padding: 1rem;
+	margin: 10% auto 0px auto;
 }
-.text_section h2
+h2, p {padding: 1rem;}
+section
 {
-	text-align: center;
-	text-transform: capitalize;
+	width: 80%;
+	max-width: 630px;
+    margin: auto;
+    background-color: #ffffff91;
+    padding: 1.5rem;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px #00000063;
+    border-radius: 8px;
+    text-align: center;
 }
-.text_section p 
+#miniball {width: 20px; display: inline-block;}
+#miniball img {width: 100%;}
+
+@media (min-width: 800px)
 {
-	padding: 0.5rem;
+	section
+	{
+		padding: 2.5rem;
+	}
 }
-.img_row
-{
-	height: 190px;
-}
-.img_row img 
-{
-	border-bottom: 3px solid #203d8e52;
-}
+
 /***********************
 ***  search_bar
 ***
@@ -150,3 +175,70 @@ input#id_search
 ***  footer
 ***
 ***********************/
+footer
+{
+	width: 100%;
+	margin-top: 10px;
+	display:flex;
+	flex-flow: row;
+    background: #755343b8;
+    border-top: 1px solid black;
+    box-shadow: 3px 3px 3px #00000063;
+    border-top-left-radius: 40px;
+}
+#footer_logo
+{
+	width: 18%;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+#footer_logo img
+{
+	width: 100%;
+}
+@media (min-width: 800px)
+{
+	footer
+	{
+		border-top-left-radius: 28px;
+	}
+	#footer_logo
+	{
+		width: 100px;
+		position: static;
+	}
+}
+footer.day_footer
+{
+	background: #8b7a51f2;
+}
+footer.night_footer
+{
+	background: #181829;
+	color: white;
+}
+.footer_section
+{
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-left: 30px;
+}
+.footer_section
+{
+	margin-left: 0px;
+}
+.footer_section li
+{
+	list-style: disc inside none;
+}
+#copyrights
+{
+	font-weight: 600;
+	font-size: 0.8rem;
+	text-transform: capitalize;
+	padding: 0px 1rem 5px 0px;
+	text-align: center;
+}

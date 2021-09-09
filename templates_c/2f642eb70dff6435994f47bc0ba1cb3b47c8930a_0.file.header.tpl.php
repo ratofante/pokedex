@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-01 23:54:56
+/* Smarty version 3.1.39, created on 2021-09-09 16:42:26
   from 'C:\xampp\htdocs\pokedex\app\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_612ff6b0e72af9_77365861',
+  'unifunc' => 'content_613a1d52e6f0f8_27328826',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2f642eb70dff6435994f47bc0ba1cb3b47c8930a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pokedex\\app\\templates\\header.tpl',
-      1 => 1630533295,
+      1 => 1631198543,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_612ff6b0e72af9_77365861 (Smarty_Internal_Template $_smarty_tpl) {
+function content_613a1d52e6f0f8_27328826 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -34,11 +34,9 @@ function content_612ff6b0e72af9_77365861 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 <header class="align_justify_center">
-	<div id="header_title">
-		<h1>Pokedex</h1>
-		<h4>by RGW</h4>
-	</div>
 	<div id="header_logo">
+		<h1>Pokedex</h1>
+		<h4 id="firma">by RGW</h4>	
 		<img src="resources/img/pokeball2.png" alt="Logo">
 	</div>
 </header><?php }

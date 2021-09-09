@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-09 16:47:45
-  from 'C:\xampp\htdocs\pokedex\app\templates\section_inicio.tpl' */
+/* Smarty version 3.1.39, created on 2021-09-09 16:57:01
+  from 'C:\xampp\htdocs\pokedex\app\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_613a1e91aa9e33_24986653',
+  'unifunc' => 'content_613a20bd5e2157_55097244',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'a0c0e97ea4a8c41326a360107633228a6496554b' => 
+    '39925a05e60984fe65f4d4c446a0e0bb58df9dad' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\pokedex\\app\\templates\\section_inicio.tpl',
-      1 => 1631198864,
+      0 => 'C:\\xampp\\htdocs\\pokedex\\app\\templates\\main.tpl',
+      1 => 1631199383,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_613a1e91aa9e33_24986653 (Smarty_Internal_Template $_smarty_tpl) {
+function content_613a20bd5e2157_55097244 (Smarty_Internal_Template $_smarty_tpl) {
 ?><main>
 	<section>
 		<div class="text_section">
