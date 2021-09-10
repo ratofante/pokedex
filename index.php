@@ -74,7 +74,9 @@ if(isset($_POST['submit']))
 }
 else
 {	
+	$Smarty->display('app/templates/menu.tpl');
 	$Smarty->display('app/templates/header.tpl');
+
 	$Smarty->display('app/templates/main.tpl');
 	$Smarty->display('app/templates/section_bajada.tpl');
 	$Smarty->display('app/templates/footer.tpl');
