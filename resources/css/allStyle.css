@@ -130,6 +130,18 @@ section
 ***  menu
 ***
 ***********************/
+#menu_header
+{
+	box-shadow: 0px 12px 10px -9px black;
+}
+#menu_header h2
+{
+	text-align: center;
+	text-transform: capitalize;
+	padding:  2rem;
+	font-size: 2rem;
+	color: white;
+}
 #menu_container
 {
 	position: fixed;
@@ -151,6 +163,7 @@ section
 	background-color: #fff0;
 	border: none;
 	width: 12vw;
+	max-width: 55px;
 }
 #menu_button img
 {
@@ -166,14 +179,58 @@ section
 {
 	position: absolute;
 	width: 0px;
-	height: 100vh;
-	background: black;
+	height: 109vh;
 	width: 70%;
+	max-width: 320px;
 	left: -100%;
 	-webkit-transition:  -webkit-transform 1s;
 	transition-duration: 1s;
 	transition-property: width, left;
+	z-index: 5;
+	background-color: #1f4252eb;
+    padding: 1.5rem;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px #00000063;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    flex-flow: column;
 }
+#menu_nav a
+{
+	width: 100%;
+	margin-top: 40px;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	text-decoration: none;
+}
+#menu_nav a:hover h3
+{
+	text-shadow: 2px 1px 1px #7b4040;
+    font-size: 1.50rem;
+}
+#menu_nav a:hover
+{
+	background-color: gray;
+}
+/*#menu_nav a:nth-child(2)
+{
+	margin-top: 30px;
+}*/
+#menu_nav a h3
+{
+	padding-left: 40px;
+	color: white;
+}
+#menu_nav a img
+{
+	width: 20%;
+    max-width: 110px;
+    position: relative;
+    left: 0;
+}
+
 
 /***********************
 ***  search_bar
@@ -234,10 +291,11 @@ footer
 	position: absolute;
 	bottom: -20%;
 	width: 100%;
+	height: 10.8vh;
 	margin-top: 10px;
 	display:flex;
 	flex-flow: row;
-    background: #755343b8;
+    background: #755343eb;
     border-top: 1px solid black;
     box-shadow: 3px 3px 3px #00000063;
     border-top-left-radius: 40px;

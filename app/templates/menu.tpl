@@ -6,6 +6,9 @@
 		</div>
 	</div>
 	<nav id="menu_nav">
+		<div id="menu_header">
+			<h2>Sections</h2>
+		</div>
 		<a href="index.html">
 			<img src="resources/img/minilogo1.png" alt="Icon">
 			<h3>Home</h3>
