@@ -188,7 +188,6 @@ section
 	transition-property: width, left;
 	z-index: 5;
 	background-color: #1f4252eb;
-    padding: 1.5rem;
     border: 1px solid black;
     box-shadow: 3px 3px 3px #00000063;
     border-top-right-radius: 8px;
@@ -199,11 +198,12 @@ section
 #menu_nav a
 {
 	width: 100%;
-	margin-top: 40px;
-	display: flex;
-	flex-flow: row;
-	align-items: center;
-	text-decoration: none;
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    text-decoration: none;
+    padding: 1.5rem;
 }
 #menu_nav a:hover h3
 {
@@ -229,6 +229,29 @@ section
     max-width: 110px;
     position: relative;
     left: 0;
+}
+/* safari and chrome */
+@-webkit-keyframes wiggle {
+	0% {-webkit-transform:rotate(4deg);}
+	50% {-webkit-transform:rotate(-4deg);}
+	100% {-webkit-transform:rotate(4deg);}
+}
+/* firefox */
+@-moz-keyframes wiggle {
+	0% {-moz-transform:rotate(4deg);}
+	50% {-moz-transform:rotate(-4deg);}
+	100% {-moz-transform:rotate(4deg);}
+}
+@keyframes wiggle {
+	0% {transform:rotate(4deg);}
+	50% {transform:rotate(-4deg);}
+	100% {transform:rotate(4deg);}
+}
+
+#menu_nav a:hover .wiggler {
+	-webkit-animation: wiggle 0.5s infinite;
+	-moz-animation: wiggle 0.5s infinite;
+	animation: wiggle 0.5s infinite;
 }
 
 
