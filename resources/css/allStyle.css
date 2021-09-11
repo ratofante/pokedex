@@ -3,14 +3,35 @@
 ***
 ***********************/
 * {margin: 0px; padding: 0px; box-sizing: border-box;}
-html 
+.home_bg {background: url('../img/cellphone_bg.jpg') no-repeat center center fixed;}
+/* ¿qué otros bg usamos para cellphone? */
+@media (min-width: 400px)
 {
+	.home_bg {background: url('../img/home_bg.png') no-repeat center center fixed;}
+	.day_bg {background: url('../img/day_bg.png') no-repeat center center fixed;}
+	.night_bg {background: url('../img/night_bg.png') no-repeat center center fixed;}
+}
+.home_bg, .day_bg, .night_bg
+{ 
 	font-size: 100%;
-	background: url('../img/cellphone_bg.jpg') no-repeat center center fixed; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
+}
+.day_bg header
+{
+	background-color: #0e0c0c45;
+    border-bottom: 1px solid black;
+    box-shadow: 3px 3px 3px #00000063;
+    border-radius: 8px;
+}
+.night_bg header
+{
+	background-color: #0e0c0c45;
+    border-bottom: 1px solid black;
+    box-shadow: 3px 3px 3px #00000063;
+    border-radius: 8px;
 }
 :root
 {
@@ -22,12 +43,13 @@ body
 {
 	font-family: var(--normal-font);
 	font-weight: 400;
-
-}
+	height: 106vh; /* I'm not sure */
+} 
 html, body {
 	max-width: 100%;
 	overflow-x: hidden;	
 }
+.inline {display: inline;}
 .align_justify_center 
 {
 	display: flex;
@@ -68,14 +90,15 @@ header
     justify-content: center;
     flex-flow: row;
     width: 400px;
-    height: 150px;;
+    height: 150px;
 }
 h1
 {
 	font-size: 5rem;
 	font-family: var(--title-font);
 	color: white;
-	padding: 40px 0px 0px 35px;
+	/*padding: 40px 0px 0px 35px;*/
+	padding: 6% 0px 0px 3%;
 }
 #firma 
 {
@@ -83,7 +106,7 @@ h1
 	font-family: var(--special-font);
 	position: relative;
 	bottom: 18px;
-	left: 130px;
+	left: 117px;
 	color: white;
 	letter-spacing: 6px;
 }
@@ -91,8 +114,8 @@ h1
 {
 	width: 200px;
 	position: relative;
-	left: 196px;
-	bottom: 127px;
+	left: 180px;
+    bottom: 120px;
 }
 /***********************
 ***  main
@@ -100,8 +123,18 @@ h1
 ***********************/
 main
 {
-	margin: 10% auto 0px auto;
-	height: 70vh;
+	display: flex;
+    flex-flow: column;
+    align-items: center;
+	margin: 20px;
+    max-height: 80vh;
+    padding: 5% 0px 0px 0px;
+	overflow-y: scroll;
+	-ms-overflow-style: none;  
+  	scrollbar-width: none;
+}
+main::-webkit-scrollbar {
+  display: none;
 }
 h2, p {padding: 1rem;}
 section
@@ -178,8 +211,8 @@ section
 #menu_nav
 {
 	position: absolute;
-	width: 0px;
 	height: 109vh;
+	top: 0;
 	width: 70%;
 	max-width: 320px;
 	left: -100%;
@@ -254,7 +287,52 @@ section
 	animation: wiggle 0.5s infinite;
 }
 
-
+@media (min-width: 930px)
+{
+	#menu_container, #menu_header
+	{
+		display: none;
+	}
+	#menu_nav
+	{
+		position: static;
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 600px;
+		max-width: 600px;
+		height: auto;
+		background-color: #ffffff00;
+		border: none;
+		box-shadow: none;
+	}
+	#menu_nav a h3
+	{
+		text-align: center;
+		font-family: var(--special-font);
+		letter-spacing: 4px;
+		font-size: 1.5rem;
+		color: white;
+		padding-left: 0px;
+	}
+	#menu_nav a img
+	{
+		width: 50px;
+    	margin: auto;
+	}
+	#menu_nav a
+	{
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		text-decoration: none;
+	}
+	#menu_nav a:hover
+	{
+		background-color: #ffffff00;
+	}
+}
 /***********************
 ***  search_bar
 ***
@@ -267,30 +345,35 @@ input#id_search
     text-align: center;
     font-family: var(--special-font);
     font-size: 1.3rem;
-    border: 3px solid #ee3652;
     border-radius: 11px;
+    border: none;
 }
 #search_id_form
 {
 	flex-flow: column;
     margin: 3px 0px 10px 0px;
-    color: white;
-    border-bottom: 3px solid #203d8e52;
-    background-color: #6a92f294;
 }
 #search_id_form div button
 {
 	background: none;
     border: none;
-    width: 30px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
 
 }
 #search_id_form div button img
 {
-	position: relative;
-	top: 16px;
-	right: 4px;
+	width: 80%;
+	-webkit-transition:  -webkit-transform 2s;
 }
+#search_id_form div button:hover img
+{
+	-webkit-transform:  rotate(360deg) translateZ(0);
+}
+
 #sugerencia_id 
 {
 	font-family: var(--special-font);

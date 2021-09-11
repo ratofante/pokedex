@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-11 19:33:19
+/* Smarty version 3.1.39, created on 2021-09-11 19:59:37
   from 'C:\xampp\htdocs\pokedex\app\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_613ce85f662756_66787921',
+  'unifunc' => 'content_613cee89ab9e36_74104566',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2f642eb70dff6435994f47bc0ba1cb3b47c8930a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pokedex\\app\\templates\\header.tpl',
-      1 => 1631381594,
+      1 => 1631383154,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_613ce85f662756_66787921 (Smarty_Internal_Template $_smarty_tpl) {
+function content_613cee89ab9e36_74104566 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html class="<?php echo $_smarty_tpl->tpl_vars['background']->value;?>
 ">
@@ -40,6 +40,5 @@ function content_613ce85f662756_66787921 (Smarty_Internal_Template $_smarty_tpl)
 		<h4 id="firma">by RGW</h4>	
 		<img src="resources/img/pokeball2.png" alt="Logo">
 	</div>
-</header>
-<main><?php }
+<?php }
 }

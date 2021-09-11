@@ -9,26 +9,28 @@
 		<div id="menu_header">
 			<h2>Sections</h2>
 		</div>
-		<a href="index.html">
+		<a href="index.php">
 			<img class="wiggler" src="resources/img/minilogo1.png" alt="Icon">
 			<h3>Home</h3>
 		</a>
-		<a href="views/pokedex.html">
+		<a href="pokedex.php">
 			<img class="wiggler" src="resources/img/minilogo2.png" alt="Icon">
 			<h3>Pokedex</h3>
 		</a>
-		<a href="views/quiz.html">
+		<a href="quiz.php">
 			<img class="wiggler" src="resources/img/minilogo3.png" alt="Icon">
 			<h3>Quiz</h3>
 		</a>
-		<a href="views/about.html">
+		<a href="about.php">
 			<img class="wiggler" src="resources/img/minilogo4.png" alt="Icon">
 			<h3>About</h3>
 		</a>
-		<a href="views/contact.html">
+		<a href="contact.php">
 			<img class="wiggler" src="resources/img/minilogo5.png" alt="Icon">
 			<h3>Contact</h3>
 		</a>	
 	</nav>
 	<script type="text/javascript" src="app/js/template_functions.js"></script>
+	</header>
+<main>
 	
