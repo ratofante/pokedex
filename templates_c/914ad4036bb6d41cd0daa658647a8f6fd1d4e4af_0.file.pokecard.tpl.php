@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-02 00:08:01
+/* Smarty version 3.1.39, created on 2021-11-15 16:28:27
   from 'C:\xampp\htdocs\pokedex\app\templates\pokecard.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_612ff9c12bbd59_32076586',
+  'unifunc' => 'content_61927c9bf35cd3_69034769',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '914ad4036bb6d41cd0daa658647a8f6fd1d4e4af' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pokedex\\app\\templates\\pokecard.tpl',
-      1 => 1630530302,
+      1 => 1636989978,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_612ff9c12bbd59_32076586 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61927c9bf35cd3_69034769 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="carta div_interior">
 	<div class="name_img_info">		
 		<fieldset class="custom_fieldset">

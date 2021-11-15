@@ -63,9 +63,8 @@ if(isset($_POST['submit']))
 				break;	
 		}	
 		$moves_string = $pokemon->getMoves();
+		$Smarty->assign('background', 'home_bg');
 		$Smarty->assign('moves_string', $moves_string);
-		//$moves_array = $pokemon->movimientos;
-		//$Smarty->assign('moves_array', $moves_array);
 		$Smarty->display('app/templates/header.tpl');
 		$Smarty->display('app/templates/search.tpl');
 		$Smarty->display('app/templates/pokecard.tpl');
@@ -76,8 +75,6 @@ else
 {	
 	$Smarty->assign('background', 'home_bg');
 	$Smarty->display('app/templates/header.tpl');
-	$Smarty->display('app/templates/menu.tpl');
-	$Smarty->display('app/templates/main.tpl');
-	$Smarty->display('app/templates/section_bajada.tpl');
+	$Smarty->display('app/templates/search.tpl');
 	$Smarty->display('app/templates/footer.tpl');
 }

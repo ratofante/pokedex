@@ -1,3 +1,5 @@
+
+
 <section class="search_bar">
 	<form id="search_id_form" class="align_justify_center" action="" method="POST">
 		<div class="align_justify_center">
