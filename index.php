@@ -23,10 +23,6 @@ if(isset($_POST['submit']))
 		$Smarty->assign('shape', $shape);
 		$Smarty->assign('habitat', $habitat);
 		$Smarty->assign('generalInfo', $generalInfo);
-
-		echo "<pre>";
-		//var_dump($pokemon->evoPath['special']);
-		echo "</pre><br>";
 	
 		switch($pokemon->evoPath['case'])
 		{
@@ -73,7 +69,7 @@ if(isset($_POST['submit']))
 }
 else
 {	
-	$Smarty->assign('background', 'home_bg');
+	$Smarty->assign('background', 'homeBg');
 	$Smarty->display('app/templates/header.tpl');
 	$Smarty->display('app/templates/search.tpl');
 	$Smarty->display('app/templates/footer.tpl');

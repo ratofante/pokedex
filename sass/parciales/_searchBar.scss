@@ -1,0 +1,42 @@
+.searchBar {
+    @include outlineSection;
+    &__form {
+        width: 268px;
+        height: 115px;
+        &__container {
+            & label {
+                font-size: 1.8rem;
+                font-weight: $bold;
+                padding-bottom: 1rem;
+                display: block;
+                text-align: center;
+            }
+            &__row {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                padding-bottom: 1rem;
+                & input {
+                    font-size: 1.5rem;
+                    padding: 1rem;
+                }
+                
+                &__button {
+                    width: 30px;
+                    border: none;
+                    background: none;
+                    & img {width:100%;}
+                }
+            }
+            &__sugerencias {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    &__hints {
+        font-size: 1.4rem;
+        margin: 1rem;
+        text-align: center;
+        font-weight: $bolder;
+    }
+}

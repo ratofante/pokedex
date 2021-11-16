@@ -17,13 +17,15 @@ class Pokedex
 	public $moves; //getMoves() Devuelve STRING con cada move separado por |
 	public $test;	
 
-	public function __construct($id)
+	public function __construct($id, bool $i = true)
 	{
 		$this->url .= $id;
 		$data_json = file_get_contents($this->url);
 		$this->pokemon = get_object_vars(json_decode($data_json));
-		$this->getInfo();
-		$this->evoPath();
+		if ($i === true) {
+			$this->getInfo();
+			$this->evoPath();
+		}		
 	}
 	public function getName()
 	{	

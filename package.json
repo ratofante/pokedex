@@ -1,0 +1,23 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "pokedex usando pokeapi.co",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss resources/css/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ratofante/pokedex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ratofante/pokedex/issues"
+  },
+  "homepage": "https://github.com/ratofante/pokedex#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Lobster&family=Lobster+Two:wght@400;700&family=VT323&display=swap");
+/* Font Families */
+/* Font Vars */
+/* variables */
+section {
+  background-color: aliceblue;
+  padding: .5rem;
+  border-radius: 7px;
+  box-shadow: 0px 0px 3px #00000085; }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+:root {
+  font-family: "Fira Mono", monospace; }
+
+/* backgrounds */
+.homeBg {
+  background: url("../img/cellphone_bg.jpg") no-repeat center center fixed; }
+
+.nightBg {
+  background: url("../img/night_bg.png") no-repeat center center fixed; }
+
+.homeBg, .nightBg {
+  font-size: 62.5%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+/*Wrapper*/
+.wrapper {
+  width: 100vw;
+  padding: 1rem; }
+
+/* Head */
+.head {
+  position: relative; }
+  .head__logo {
+    width: 300px;
+    height: 100px;
+    padding-top: 1rem;
+    /*espacio para DATE/TIME */ }
+    .head__logo__title {
+      position: relative;
+      font-family: "Lobster", cursive;
+      color: white;
+      font-size: 6rem;
+      text-align: center;
+      width: 250px;
+      margin: auto;
+      z-index: 3; }
+    .head__logo__firma {
+      position: relative;
+      font-family: "VT323", monospace;
+      color: black;
+      font-size: 2rem;
+      text-align: right;
+      width: 150px;
+      margin: auto;
+      bottom: 10px;
+      z-index: 2; }
+    .head__logo__img {
+      position: relative;
+      width: 70px;
+      height: 0px;
+      margin: auto;
+      bottom: 57px;
+      left: 94px;
+      z-index: 1; }
+      .head__logo__img img {
+        width: 100%; }
+  .head__time {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+.searchBar {
+  border: 1px solid #7a7a7a;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0px 1px 3px #000000b3; }
+  .searchBar__form {
+    width: 268px;
+    height: 115px; }
+    .searchBar__form__container label {
+      font-size: 1.8rem;
+      font-weight: 500;
+      padding-bottom: 1rem;
+      display: block;
+      text-align: center; }
+    .searchBar__form__container__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding-bottom: 1rem; }
+      .searchBar__form__container__row input {
+        font-size: 1.5rem;
+        padding: 1rem; }
+      .searchBar__form__container__row__button {
+        width: 30px;
+        border: none;
+        background: none; }
+        .searchBar__form__container__row__button img {
+          width: 100%; }
+    .searchBar__form__container__sugerencias {
+      font-size: 1.2rem; }
+  .searchBar__hints {
+    font-size: 1.4rem;
+    margin: 1rem;
+    text-align: center;
+    font-weight: 600; }
