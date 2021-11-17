@@ -37,17 +37,18 @@ section {
 
 /* Head */
 .head {
-  position: relative; }
+  position: relative;
+  margin-bottom: 6rem; }
   .head__logo {
     width: 300px;
-    height: 100px;
+    height: 130px;
     padding-top: 1rem;
     /*espacio para DATE/TIME */ }
     .head__logo__title {
       position: relative;
       font-family: "Lobster", cursive;
       color: white;
-      font-size: 6rem;
+      font-size: 8rem;
       text-align: center;
       width: 250px;
       margin: auto;
@@ -58,17 +59,17 @@ section {
       color: black;
       font-size: 2rem;
       text-align: right;
-      width: 150px;
+      width: 63px;
       margin: auto;
-      bottom: 10px;
+      bottom: 15px;
       z-index: 2; }
     .head__logo__img {
       position: relative;
-      width: 70px;
+      width: 108px;
       height: 0px;
       margin: auto;
-      bottom: 57px;
-      left: 94px;
+      bottom: 75px;
+      left: 50px;
       z-index: 1; }
       .head__logo__img img {
         width: 100%; }
@@ -108,7 +109,16 @@ section {
     .searchBar__form__container__sugerencias {
       font-size: 1.2rem; }
   .searchBar__hints {
+    animation: growWhenRdy;
+    animation-duration: .8s;
+    transition: .8s;
     font-size: 1.4rem;
     margin: 1rem;
     text-align: center;
     font-weight: 600; }
+
+@keyframes growWhenRdy {
+  0% {
+    font-size: 0px; }
+  100% {
+    font-size: 1.4rem; } }

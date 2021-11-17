@@ -34,7 +34,15 @@
         }
     }
     &__hints {
-        font-size: 1.4rem;
+        $fontSize: 1.4rem;
+        @keyframes growWhenRdy {
+            0% {font-size: 0px;}
+            100% {font-size: $fontSize;}
+        }
+        animation: growWhenRdy;
+        animation-duration: .8s;
+        transition: .8s;
+        font-size: $fontSize;
         margin: 1rem;
         text-align: center;
         font-weight: $bolder;

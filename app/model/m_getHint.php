@@ -1,5 +1,5 @@
 <?php
-// Array with names
+// pokeArray con array asociativo id -> nombrePokemon.
 $pokeArray[1] = "bulbasaur";
 $pokeArray[2] = "ivysaur";
 $pokeArray[3] = "venusaur";
@@ -152,27 +152,39 @@ $pokeArray[149] = "dragonite";
 $pokeArray[150] = "mewtwo";
 $pokeArray[151] = "mew";
 
-// get the q parameter from URL
-$q = $_REQUEST["q"];
+// se recibe 'search' por la URL
+$search = $_REQUEST["search"];
 
 $hint = "";
 
-// lookup all hints from array if $q is different from ""
-if ($q !== "") 
+// Donde se ingrese algún dato .. 
+if ($search !== "")
 {
-  $q = strtolower($q);
-  $len=strlen($q);
-  foreach($pokeArray as $name) 
+  // Chequeamos si es un número y es entre 1 - 151
+  if (is_numeric($search))
   {
-    if (stristr($q, substr($name, 0, $len))) 
+    $hint = "number";
+    if ($search > 151) {$hint = "Try searching a number below 151";}
+    elseif($search < 1) {$hint = "The number must be between 1 and 151";}
+    else {$hint = $pokeArray[$search];}
+  } 
+  else
+  {
+    // Buscamos por coincidencias con el nombre
+    $search = strtolower($search);
+    $len=strlen($search);
+    foreach($pokeArray as $name) 
     {
-      if ($hint === "") 
+      if (stristr($search, substr($name, 0, $len))) 
       {
-        $hint = $name;
-      } 
-      else 
-      {
-        $hint .= ", $name";
+        if ($hint === "") 
+        {
+          $hint = $name;
+        } 
+        else 
+        {
+          $hint .= ", $name";
+        }
       }
     }
   }
