@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-17 14:32:30
+/* Smarty version 3.1.39, created on 2021-11-18 18:44:24
   from 'C:\xampp\htdocs\pokedex\app\templates\search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6195046e0f44c1_95584663',
+  'unifunc' => 'content_619690f8d8d964_25526377',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '19e6380b75fa0974a70b4e972529d5bbdad609b6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pokedex\\app\\templates\\search.tpl',
-      1 => 1637086970,
+      1 => 1637257457,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6195046e0f44c1_95584663 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619690f8d8d964_25526377 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section>
 	<div class="searchBar">
-		<form class="searchBar__form" id="search_id_form" action="" method="POST">
+		<form class="searchBar__form" id="search_id_form">
 			<div class="searchBar__form__container">
 				<label for="id_search">Find a pokemon :</label>
 				<div class="searchBar__form__container__row">
@@ -38,5 +38,7 @@ function content_6195046e0f44c1_95584663 (Smarty_Internal_Template $_smarty_tpl)
 		<div class="searchBar__hints" id="txtHint"></div>
 	</div>
 </section>
-<?php }
+<div id="response">
+	<pre></pre>
+</div><?php }
 }

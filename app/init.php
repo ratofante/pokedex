@@ -15,8 +15,8 @@ define('RUTA_SITIO', 'http://localhost/pokedex/');
 define('RUTA_IMG', 'http://localhost/pokedex/resources/img/');
 
 //Incluir Objetos
+include('app/clases/pokedex.php');
 include('app/model/m_data.php');
-include('app/model/m_pokedex.php');
 include('app/smarty/libs/Smarty.class.php');
 
 

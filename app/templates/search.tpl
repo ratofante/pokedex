@@ -1,6 +1,6 @@
 <section>
 	<div class="searchBar">
-		<form class="searchBar__form" id="search_id_form" action="" method="POST">
+		<form class="searchBar__form" id="search_id_form">
 			<div class="searchBar__form__container">
 				<label for="id_search">Find a pokemon :</label>
 				<div class="searchBar__form__container__row">
@@ -15,3 +15,6 @@
 		<div class="searchBar__hints" id="txtHint"></div>
 	</div>
 </section>
+<div id="response">
+	<pre></pre>
+</div>
