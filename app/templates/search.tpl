@@ -4,8 +4,8 @@
 			<div class="searchBar__form__container">
 				<label for="id_search">Find a pokemon :</label>
 				<div class="searchBar__form__container__row">
-					<input title="Busca ingresando la Id" type="varchar" name="id" id="id_search" min="1" max="151" aria-describedby="sugerencia_id" autofocus="on" required onkeyup="showHint(this.value)">
-					<button class="searchBar__form__container__row__button"type="submit" form="search_id_form" name="submit" value="submit">
+					<input title="Busca ingresando la Id" type="varchar" name="id" id="idSearch" min="1" max="151" aria-describedby="sugerencia_id" autofocus="on" required onkeyup="showHint(this.value)">
+					<button class="searchBar__form__container__row__button" form="search_id_form" onclick="getId()">
 						<img class="img_class" src="resources/img/miniball.png" alt="Search Icon">
 					</button>
 				</div>

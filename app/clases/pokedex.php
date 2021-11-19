@@ -27,6 +27,10 @@ class Pokedex
 			$this->evoPath();
 		}		
 	}
+	public function __destruct()
+	{
+		
+	}
 	public function getName()
 	{	
 		$this->nombre = $this->pokemon['name'];
