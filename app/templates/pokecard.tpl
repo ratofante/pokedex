@@ -58,6 +58,8 @@
 	{/if}
 	<fieldset>
 		<legend>Movimientos - string</legend>
-			{$moves_string}
+			{foreach $moves as $move}
+			<li>{$move}</li>
+			{/foreach}
 	</fieldset>
 </div>

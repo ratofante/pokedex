@@ -231,6 +231,6 @@ class Pokedex
 			 $this->movimientos[$i] = $movimiento['name'];
 		}
 		$this->moves = implode(" | ", $this->movimientos);
-		return $this->moves;
+		return $this->movimientos;
 	}
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-19 17:49:56
+/* Smarty version 3.1.39, created on 2021-11-23 17:56:35
   from 'C:\xampp\htdocs\pokedex\app\templates\pokecard.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6197d5b4a9d7e8_54739573',
+  'unifunc' => 'content_619d1d43327c67_22934595',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2d4c1f1e3db00294d368cbf07d1d6e1c8c0d7d5c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pokedex\\app\\templates\\pokecard.tpl',
-      1 => 1636989978,
+      1 => 1637686510,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6197d5b4a9d7e8_54739573 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619d1d43327c67_22934595 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="carta div_interior">
 	<div class="name_img_info">		
 		<fieldset class="custom_fieldset">
@@ -111,8 +111,17 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 	<?php }?>
 	<fieldset>
 		<legend>Movimientos - string</legend>
-			<?php echo $_smarty_tpl->tpl_vars['moves_string']->value;?>
-
+			<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['moves']->value, 'move');
+$_smarty_tpl->tpl_vars['move']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['move']->value) {
+$_smarty_tpl->tpl_vars['move']->do_else = false;
+?>
+			<li><?php echo $_smarty_tpl->tpl_vars['move']->value;?>
+</li>
+			<?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 	</fieldset>
 </div><?php }
 }

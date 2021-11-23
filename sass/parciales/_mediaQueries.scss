@@ -1,0 +1,32 @@
+/* Media Queries */
+
+@mixin smallMobile {
+    @media only screen and (min-width:319px) {
+        @content; 
+    }
+}
+@mixin mediumMobile {
+    @media only screen and (min-width:370px) {
+        @content;
+    }
+}
+@mixin largeMobile {
+    @media only screen and (min-width: 420px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media only screen and (min-width: 760px){
+        @content;
+    }
+}
+@mixin squarePc {
+    @media only screen and (min-width: 1020px){
+         @content;
+    }
+}
+@mixin widePc {
+    @media only screen and (min-width:1400px){
+        
+    }
+}

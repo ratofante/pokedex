@@ -55,8 +55,8 @@ $name = $Pokedex->getName();
 				$Smarty->assign('evo_img', $evo_img);
 				break;	
 		}	
-		$moves_string = $Pokedex->getMoves();
-		$Smarty->assign('moves_string', $moves_string);
+		$moves_array = $Pokedex->getMoves();
+		$Smarty->assign('moves', $moves_array);
 		$Smarty->display('../templates/pokecard.tpl');
         
 		
