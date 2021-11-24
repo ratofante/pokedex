@@ -7,9 +7,13 @@
             & label {
                 font-size: 1.8rem;
                 font-weight: $bold;
-                padding-bottom: 1rem;
+                margin-bottom: 1rem;
                 display: block;
                 text-align: center;
+                background: $mainColor;
+                color: $lightColor;
+                padding: 1rem;
+                border-radius: $insideBorderRadius;
             }
             &__row {
                 display: flex;
@@ -30,6 +34,7 @@
             }
             &__sugerencias {
                 font-size: 1.2rem;
+                text-align: center;
             }
         }
     }

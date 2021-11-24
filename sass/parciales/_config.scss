@@ -9,9 +9,26 @@ $contrast: monospace;
 
 $lightColor: white;
 $darkColor: black;
+$mainColor:#002f58;
 
 /* variables */
 
 $borderRadius: 7px;
+$insideBorderRadius: 4px;
 $bold: 500;
 $bolder: 600;
+
+/* Width considerando el padding (10px x lado) 
+del wrapper para el contenedor xxWidth. 
+Luego in xxInsideWidth para
+aquello que esté dentro del contenedor. */
+$smWidth: 300px;
+$smInsideWidth: 268px;
+
+$mdWidth: 355px;
+$mdInsideWidth: 320px;
+
+$lgWidth: 405px;
+$lgInsideWidth: 370px;
+
+

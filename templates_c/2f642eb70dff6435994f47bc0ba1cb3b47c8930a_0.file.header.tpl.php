@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-23 18:55:27
+/* Smarty version 3.1.39, created on 2021-11-24 14:19:36
   from 'C:\xampp\htdocs\pokedex\app\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_619d2b0f81e295_15249231',
+  'unifunc' => 'content_619e3be8eb2395_00578097',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2f642eb70dff6435994f47bc0ba1cb3b47c8930a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pokedex\\app\\templates\\header.tpl',
-      1 => 1637690125,
+      1 => 1637692594,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_619d2b0f81e295_15249231 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619e3be8eb2395_00578097 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html class="<?php echo $_smarty_tpl->tpl_vars['background']->value;?>
 ">

@@ -1,7 +1,12 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Lobster&family=Lobster+Two:wght@400;700&family=VT323&display=swap");
 /* Font Families */
 /* Font Vars */
 /* variables */
+/* Width considerando el padding (10px x lado) 
+del wrapper para el contenedor xxWidth. 
+Luego in xxInsideWidth para
+aquello que esté dentro del contenedor. */
 /* Media Queries */
 section {
   background-color: aliceblue;
@@ -9,6 +14,8 @@ section {
   border-radius: 7px;
   -webkit-box-shadow: 0px 0px 3px #00000085;
           box-shadow: 0px 0px 3px #00000085;
+  width: 300px;
+  margin: auto;
 }
 
 * {
@@ -38,7 +45,7 @@ section {
 
 /*Wrapper*/
 .wrapper {
-  width: 100vw;
+  width: 320px;
   padding: 1rem;
 }
 
@@ -114,9 +121,13 @@ section {
 .searchBar__form__container label {
   font-size: 1.8rem;
   font-weight: 500;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
   display: block;
   text-align: center;
+  background: #002f58;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
 }
 
 .searchBar__form__container__row {
@@ -148,6 +159,7 @@ section {
 
 .searchBar__form__container__sugerencias {
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .searchBar__hints {
@@ -197,6 +209,7 @@ section {
   font-size: 2.5rem;
   font-family: "Lobster Two", cursive;
   padding: 1rem 1rem 1rem 2rem;
+  border-radius: 4px;
   background-color: #002f58;
   color: white;
   width: 268px;
@@ -211,33 +224,233 @@ section {
   width: 100%;
 }
 
+.pokecard__info {
+  border: 1px solid #7a7a7a;
+  border-radius: 4px;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 1px 3px #000000b3;
+          box-shadow: 0px 1px 3px #000000b3;
+  margin-top: 1rem;
+}
+
 .pokecard__info__title {
   font-size: 2.5rem;
   font-family: "Lobster Two", cursive;
   padding: 1rem 1rem 1rem 2rem;
+  border-radius: 4px;
   color: #002f58;
 }
 
 .pokecard__info__text {
   font-family: "Fira Mono", monospace;
   font-size: 1.5rem;
+  background-color: #002f58;
+  color: white;
+  padding: 1rem 2rem;
+  line-height: 3rem;
+  border-radius: 4px;
 }
 
 .pokeAnexo {
   margin: 1rem auto;
 }
 
+.pokeAnexo__card {
+  border: 1px solid #7a7a7a;
+  border-radius: 4px;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 1px 3px #000000b3;
+          box-shadow: 0px 1px 3px #000000b3;
+}
+
 .pokeAnexo__card__title {
   font-size: 2.5rem;
   font-family: "Lobster Two", cursive;
   padding: 1rem 1rem 1rem 2rem;
+  border-radius: 4px;
+}
+
+.pokeAnexo__card__slider {
+  width: 270px;
+  overflow-x: hidden;
+  border-radius: 4px;
+}
+
+.pokeAnexo__card__slider:hover .pokeAnexo__card__slider__slide {
+  right: 270px;
+}
+
+.pokeAnexo__card__slider__slide {
+  position: relative;
+  right: 0px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  margin-top: 1rem;
+  width: calc(270px * 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+}
+
+.pokeAnexo__card__slider__slide__title {
+  width: 270px;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #002f58;
+  color: white;
+  font-family: "Lobster Two", cursive;
+  font-size: 2.3rem;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.pokeAnexo__card__slider__slide__text {
+  width: 270px;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: white;
+  color: #002f58;
+  font-family: "Fira Mono", monospace;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 .evoPath {
   margin: 1rem auto;
 }
 
+.evoPath__card {
+  border: 1px solid #7a7a7a;
+  border-radius: 4px;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 1px 3px #000000b3;
+          box-shadow: 0px 1px 3px #000000b3;
+  overflow: hidden;
+}
+
+.evoPath__card__title {
+  font-size: 2.5rem;
+  font-family: "Lobster Two", cursive;
+  padding: 1rem 1rem 1rem 2rem;
+  border-radius: 4px;
+  color: #002f58;
+}
+
+.evoPath__card__evolutions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.evoPath__card__evolutions__evo {
+  position: relative;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  margin-top: 30px;
+  background-color: #002f58;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.evoPath__card__evolutions__evo:last-child {
+  margin-bottom: 30px;
+}
+
+.evoPath__card__evolutions__evo__name {
+  font-family: "Lobster Two", cursive;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  width: 268px;
+  color: white;
+}
+
+.evoPath__card__evolutions__evo__img {
+  width: 150px;
+  height: 36px;
+  position: relative;
+  right: 0px;
+  bottom: 30px;
+}
+
+.evoPath__card__evolutions__evo__img img {
+  width: 100%;
+}
+
+.evoPath__card__bg {
+  height: 0px;
+  width: 380px;
+  position: relative;
+  bottom: 285px;
+  right: 114px;
+  z-index: 1;
+  opacity: .8;
+}
+
+.evoPath__card__bg img {
+  width: 100%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
 .moveList {
   margin: 1rem auto;
+}
+
+.moveList__card {
+  border: 1px solid #7a7a7a;
+  border-radius: 4px;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 1px 3px #000000b3;
+          box-shadow: 0px 1px 3px #000000b3;
+  background-color: #002f58;
+}
+
+.moveList__card__title {
+  font-size: 2.5rem;
+  font-family: "Lobster Two", cursive;
+  padding: 1rem 1rem 1rem 2rem;
+  border-radius: 4px;
+  color: white;
+}
+
+.moveList__card__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.moveList__card__container__move {
+  background-color: white;
+  color: #002f58;
+  font-size: 1.5rem;
+  padding: .5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  margin: .2rem;
 }
 /*# sourceMappingURL=main.css.map */
