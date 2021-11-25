@@ -105,7 +105,10 @@
         overflow:hidden;
         &__title {
             @include cardsTitle;
+            background-color: #fdfdfd8f;
             color: $mainColor;
+            position:relative;
+            z-index: 3;
         }
         &__evolutions {
             display: flex;
@@ -141,10 +144,10 @@
         }
         &__bg {
             height:0px;
-            width:380px;
+            width:406px;
             position:relative;
-            bottom: 285px;
-            right: 114px;
+            bottom: 339px;
+            right: 135px;
             z-index: 1;
             opacity: .8;
             & img {width: 100%; transform: scaleX(-1);}

@@ -193,6 +193,23 @@ section {
   }
 }
 
+.errorSection {
+  margin: 1rem auto;
+}
+
+.errorSection__errorMsg {
+  border: 1px solid #7a7a7a;
+  border-radius: 4px;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 1px 3px #000000b3;
+          box-shadow: 0px 1px 3px #000000b3;
+  font-family: "Fira Mono", monospace;
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
 .pokecard {
   margin: 1rem auto;
 }
@@ -341,7 +358,10 @@ section {
   font-family: "Lobster Two", cursive;
   padding: 1rem 1rem 1rem 2rem;
   border-radius: 4px;
+  background-color: #fdfdfd8f;
   color: #002f58;
+  position: relative;
+  z-index: 3;
 }
 
 .evoPath__card__evolutions {
@@ -400,10 +420,10 @@ section {
 
 .evoPath__card__bg {
   height: 0px;
-  width: 380px;
+  width: 406px;
   position: relative;
-  bottom: 285px;
-  right: 114px;
+  bottom: 339px;
+  right: 135px;
   z-index: 1;
   opacity: .8;
 }

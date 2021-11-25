@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-24 22:07:16
+/* Smarty version 3.1.39, created on 2021-11-25 18:36:07
   from 'C:\xampp\htdocs\pokedex\app\templates\search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_619ea984cc7df5_95503313',
+  'unifunc' => 'content_619fc987572fa5_13568057',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '19e6380b75fa0974a70b4e972529d5bbdad609b6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pokedex\\app\\templates\\search.tpl',
-      1 => 1637788034,
+      1 => 1637861764,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_619ea984cc7df5_95503313 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619fc987572fa5_13568057 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section>
 	<div class="searchBar">
 		<form class="searchBar__form" id="search_id_form">
@@ -40,6 +40,6 @@ function content_619ea984cc7df5_95503313 (Smarty_Internal_Template $_smarty_tpl)
 </section>
 
 <div id="response">
-	<pre></pre>
+
 </div><?php }
 }

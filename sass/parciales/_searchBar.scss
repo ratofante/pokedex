@@ -53,3 +53,14 @@
         font-weight: $bolder;
     }
 }
+.errorSection {
+    margin: 1rem auto;
+    &__errorMsg {
+        @include outlineSection;
+        font-family: $normal;
+        font-weight: $bold;
+        font-size: 1.3rem;
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+}

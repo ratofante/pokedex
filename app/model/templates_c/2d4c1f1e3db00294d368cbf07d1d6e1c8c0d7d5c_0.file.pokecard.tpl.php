@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-24 23:46:29
+/* Smarty version 3.1.39, created on 2021-11-25 17:59:10
   from 'C:\xampp\htdocs\pokedex\app\templates\pokecard.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_619ec0c548e635_90498313',
+  'unifunc' => 'content_619fc0deaf8c86_14126971',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2d4c1f1e3db00294d368cbf07d1d6e1c8c0d7d5c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pokedex\\app\\templates\\pokecard.tpl',
-      1 => 1637793977,
+      1 => 1637859513,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_619ec0c548e635_90498313 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619fc0deaf8c86_14126971 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Template prueba PokeCard -->
 		<section class="pokecard">
 			<div class="pokecard__mainCard">
@@ -81,7 +81,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['evo']->value) {
 $_smarty_tpl->tpl_vars['evo']->do_else = false;
 ?>
 					<div class="evoPath__card__evolutions__evo">
-						<h3 class="evoPath__card__evolutions__evo__name"><?php echo $_smarty_tpl->tpl_vars['evo']->value['id'];?>
+						<h3 class="evoPath__card__evolutions__evo__name">#<?php echo $_smarty_tpl->tpl_vars['evo']->value['id'];?>
  <?php echo $_smarty_tpl->tpl_vars['evo']->value['name'];?>
 </h3>
 						<div class="evoPath__card__evolutions__evo__img">

@@ -17,5 +17,5 @@
 </section>
 
 <div id="response">
-	<pre></pre>
+
 </div>
