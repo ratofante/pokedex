@@ -18,9 +18,12 @@
 }
 /*Wrapper*/
 .wrapper {
+    margin: auto;
     width: 320px;
     padding:1rem;
-    
+    @include mediumMobile {
+        width:370px;
+    }
 }
 
 /* Head */
@@ -28,9 +31,13 @@
     position: relative;
     margin-bottom: 6rem;
     &__logo {
+        margin:auto;
         width: 300px;
         height: 130px;
         padding-top: 1rem; /*espacio para DATE/TIME */
+        @include mediumMobile {
+            width: 348px;
+        }
         &__title {
             position:relative;
             font-family: $title1;
@@ -40,6 +47,10 @@
             width:250px;
             margin:auto;
             z-index: 3;
+            @include mediumMobile {
+                font-size: 9rem;
+                width: 300px;
+            }
         }
         &__firma {
             position:relative;

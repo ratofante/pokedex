@@ -18,6 +18,12 @@ section {
   margin: auto;
 }
 
+@media only screen and (min-width: 370px) {
+  section {
+    width: 348px;
+  }
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -45,8 +51,15 @@ section {
 
 /*Wrapper*/
 .wrapper {
+  margin: auto;
   width: 320px;
   padding: 1rem;
+}
+
+@media only screen and (min-width: 370px) {
+  .wrapper {
+    width: 370px;
+  }
 }
 
 /* Head */
@@ -56,10 +69,17 @@ section {
 }
 
 .head__logo {
+  margin: auto;
   width: 300px;
   height: 130px;
   padding-top: 1rem;
   /*espacio para DATE/TIME */
+}
+
+@media only screen and (min-width: 370px) {
+  .head__logo {
+    width: 348px;
+  }
 }
 
 .head__logo__title {
@@ -71,6 +91,13 @@ section {
   width: 250px;
   margin: auto;
   z-index: 3;
+}
+
+@media only screen and (min-width: 370px) {
+  .head__logo__title {
+    font-size: 9rem;
+    width: 300px;
+  }
 }
 
 .head__logo__firma {
@@ -118,6 +145,12 @@ section {
   height: 115px;
 }
 
+@media only screen and (min-width: 370px) {
+  .searchBar__form {
+    width: 316px;
+  }
+}
+
 .searchBar__form__container label {
   font-size: 1.8rem;
   font-weight: 500;
@@ -151,6 +184,12 @@ section {
   width: 30px;
   border: none;
   background: none;
+}
+
+@media only screen and (min-width: 370px) {
+  .searchBar__form__container__row__button {
+    width: 40px;
+  }
 }
 
 .searchBar__form__container__row__button img {
@@ -207,7 +246,6 @@ section {
   font-weight: 500;
   font-size: 1.3rem;
   padding: 1rem;
-  margin: 1rem auto;
 }
 
 .pokecard {
@@ -232,9 +270,21 @@ section {
   width: 268px;
 }
 
+@media only screen and (min-width: 370px) {
+  .pokecard__mainCard__title {
+    width: 316px;
+  }
+}
+
 .pokecard__mainCard__img {
   margin: auto;
   width: 268px;
+}
+
+@media only screen and (min-width: 370px) {
+  .pokecard__mainCard__img {
+    width: 316px;
+  }
 }
 
 .pokecard__mainCard__img img {
@@ -293,8 +343,14 @@ section {
   border-radius: 4px;
 }
 
+@media only screen and (min-width: 370px) {
+  .pokeAnexo__card__slider {
+    width: 318px;
+  }
+}
+
 .pokeAnexo__card__slider:hover .pokeAnexo__card__slider__slide {
-  right: 270px;
+  right: 318px;
 }
 
 .pokeAnexo__card__slider__slide {
@@ -303,7 +359,7 @@ section {
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   margin-top: 1rem;
-  width: calc(270px * 2);
+  width: calc(318px * 2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,7 +374,7 @@ section {
 }
 
 .pokeAnexo__card__slider__slide__title {
-  width: 270px;
+  width: 318px;
   padding: 1rem;
   border-radius: 4px;
   background-color: #002f58;
@@ -330,7 +386,7 @@ section {
 }
 
 .pokeAnexo__card__slider__slide__text {
-  width: 270px;
+  width: 318px;
   padding: 1rem;
   border-radius: 4px;
   background-color: white;

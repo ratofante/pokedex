@@ -20,10 +20,16 @@
             background-color: #002f58;
             color: $lightColor;
             width: $smInsideWidth;
+            @include mediumMobile {
+                width: $mediumMobileInsideWidth;
+            }
         }
         &__img {
             margin: auto;
             width: $smInsideWidth;
+            @include mediumMobile {
+                width: $mediumMobileInsideWidth;
+            }
             & img {width: 100%;}
         }
     }
@@ -58,6 +64,10 @@
             width: $anchoMax;
             overflow-x: hidden;
             border-radius: $insideBorderRadius;
+            @include mediumMobile {
+                $anchoMax: 318px;
+                width: $anchoMax;
+            }
             @mixin slides {
                 width:$anchoMax;
                 padding: 1rem;

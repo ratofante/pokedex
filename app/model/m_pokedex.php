@@ -112,21 +112,25 @@ if($response[0] === true)
 			break;	
 	}	
 
-	$evoId = [];
-	foreach($evo_id as $value)
+	if(isset($evo_id))
 	{
-		$id=str_replace('/','',$value);
-		array_push($evoId, $id);
-	}
+		$evoId = [];
+		foreach($evo_id as $value)
+		{
+			$id=str_replace('/','',$value);
+			array_push($evoId, $id);
+		}
 
-	$evoArray = [];
-	for ($i=0; $i < count($evoId); $i++) 
-	{ 
-		$evoToken = array('id' => $evoId[$i], 'name' => $evo[$i], 'img' => $evo_img[$i]);
-		array_push($evoArray, $evoToken);
+		$evoArray = [];
+		for ($i=0; $i < count($evoId); $i++) 
+		{ 
+			$evoToken = array('id' => $evoId[$i], 'name' => $evo[$i], 'img' => $evo_img[$i]);
+			array_push($evoArray, $evoToken);
+		}
 	}
+	
 
-	$Smarty->assign('evoArray', $evoArray);
+	if(isset($evoArray)){$Smarty->assign('evoArray', $evoArray);}
 	$moves_array = $Pokedex->getMoves();
 	$Smarty->assign('moves', $moves_array);
 	$Smarty->display('../templates/pokecard.tpl');

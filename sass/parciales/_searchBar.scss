@@ -3,6 +3,9 @@
     &__form {
         width: 268px;
         height: 115px;
+        @include mediumMobile {
+            width: $mediumMobileInsideWidth;
+        }
         &__container {
             & label {
                 font-size: 1.8rem;
@@ -29,6 +32,9 @@
                     width: 30px;
                     border: none;
                     background: none;
+                    @include mediumMobile {
+                        width: 40px;
+                    }
                     & img {width:100%;}
                 }
             }
@@ -61,6 +67,5 @@
         font-weight: $bold;
         font-size: 1.3rem;
         padding: 1rem;
-        margin: 1rem auto;
     }
 }
