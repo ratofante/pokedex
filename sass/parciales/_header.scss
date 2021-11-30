@@ -24,6 +24,9 @@
     @include mediumMobile {
         width:370px;
     }
+    @include largeMobile {
+        width: 420px;
+    }
 }
 
 /* Head */
@@ -50,6 +53,10 @@
             @include mediumMobile {
                 font-size: 9rem;
                 width: 300px;
+            }
+            @include largeMobile {
+                width: 330px;
+                font-size: 10rem;
             }
         }
         &__firma {

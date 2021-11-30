@@ -14,4 +14,7 @@ section {
     @include mediumMobile {
         width: $mediumMobileWidth;
     }
+    @include largeMobile {
+        width: $largeMobileWidth;
+    }
 }

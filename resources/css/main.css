@@ -24,6 +24,12 @@ section {
   }
 }
 
+@media only screen and (min-width: 420px) {
+  section {
+    width: 380px;
+  }
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -62,6 +68,12 @@ section {
   }
 }
 
+@media only screen and (min-width: 420px) {
+  .wrapper {
+    width: 420px;
+  }
+}
+
 /* Head */
 .head {
   position: relative;
@@ -97,6 +109,13 @@ section {
   .head__logo__title {
     font-size: 9rem;
     width: 300px;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .head__logo__title {
+    width: 330px;
+    font-size: 10rem;
   }
 }
 
@@ -148,6 +167,12 @@ section {
 @media only screen and (min-width: 370px) {
   .searchBar__form {
     width: 316px;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .searchBar__form {
+    width: 348px;
   }
 }
 
@@ -276,6 +301,12 @@ section {
   }
 }
 
+@media only screen and (min-width: 420px) {
+  .pokecard__mainCard__title {
+    width: 348px;
+  }
+}
+
 .pokecard__mainCard__img {
   margin: auto;
   width: 268px;
@@ -349,8 +380,14 @@ section {
   }
 }
 
+@media only screen and (min-width: 420px) {
+  .pokeAnexo__card__slider {
+    width: 348px;
+  }
+}
+
 .pokeAnexo__card__slider:hover .pokeAnexo__card__slider__slide {
-  right: 318px;
+  right: 348px;
 }
 
 .pokeAnexo__card__slider__slide {
@@ -359,7 +396,7 @@ section {
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   margin-top: 1rem;
-  width: calc(318px * 2);
+  width: calc(348px * 2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,7 +411,7 @@ section {
 }
 
 .pokeAnexo__card__slider__slide__title {
-  width: 318px;
+  width: 348px;
   padding: 1rem;
   border-radius: 4px;
   background-color: #002f58;
@@ -386,7 +423,7 @@ section {
 }
 
 .pokeAnexo__card__slider__slide__text {
-  width: 318px;
+  width: 348px;
   padding: 1rem;
   border-radius: 4px;
   background-color: white;
